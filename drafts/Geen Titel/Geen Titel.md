@@ -29,11 +29,12 @@ public int Add(int term1, int term2) {
 De functie signatuur (de *wat*) vertelt dat het twee getallen optelt en het resultaat (de som) ervan terug geeft. De functie body (de *hoe*) zegt dat zij dit doet door de eerste input variabele te vermenigvuldigen met de tweede.
 
 <aside style="background-color:#666;padding:1em;margin-bottom:1em;">
+
 Overigens: zien jullie *alle* fouten in de deze code? Het zijn er drie! En deze drie zijn elk te verdelen in een aparte categorie. Ga uit van de aanroep `Add(2147483646, 2);`.
 
 1. Logisch fout: deze is het gevolg van een verschil tussen *daadwerkelijke* uitkomsten en *verwachte* uitkomsten;<br />
-Het resultaat van de functie, afgaande op de naam van de functie, zou `2147483648` moeten zijn, niet `4294967294`.<br/>**PS:** Het meeste venijnige in deze is dat het expliciet mijn bedoeling is om jullie op het verkeerde been te zetten. Als dat is gelukt, dan is de functie dus goed :smile:;
-1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br />Wat gebeurt er als de aanroep plaats vindt?<br />Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
+Het resultaat van de functie, afgaande op de naam van de functie, zou `2147483648` moeten zijn, niet `4294967294`.<br/>**PS:** Het meeste venijnige in deze is dat het expliciet mijn bedoeling is om jullie op het verkeerde been te zetten. Als dat is gelukt, dan is de functie dus goed :smile:; Maar natuurlijk is deze "fout" een flagrante schending van het adagium "Use Intention-Revealing Names". Zie pagina 18 in [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
+1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br />Wat gebeurt er als de aanroep plaats vindt? Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
 1. Functioneel fout: is fout wanneer een functie minder kan of doet (of juist te veel kan/doet) dan wat er wordt verwacht.<br />Zie bijvoorbeeld: `Add(1.5, 3.333);` of `Add(1,2,3);`.
 
 </aside>
@@ -236,7 +237,7 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
 
-> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br /><cite>--- [The Problem Solver](https://www.theproblemsolver.nl/) ---</cite>
+> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br /><cite>--- Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/) ---</cite>
 
 Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt. 
 
@@ -430,32 +431,45 @@ Enjoy coding<br />Stay curious<br />Keep thinking
 
 ## Referenties
 
-* https://nl.wikipedia.org/wiki/Imperatief_programmeren
+In volgorde van verschijning in de tekst:
+
 * https://nl.wikipedia.org/wiki/Declaratieve_taal
+* https://nl.wikipedia.org/wiki/Imperatief_programmeren
+* https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
 * https://nl.wikipedia.org/wiki/Programmeerparadigma
+* https://vertabelo.com/blog/why-are-relational-databases-relational/
 * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
 * https://www.computerhistory.org/timeline/memory-storage/
-* https://en.wikipedia.org/wiki/Edgar_F._Codd
+* https://en.wikipedia.org/wiki/Edgar_F._Codd)
 * https://learnsql.com/blog/codd-article-databases/
 * https://learnsql.com/blog/history-of-sql/
 * https://en.wikipedia.org/wiki/Database_normalization
-* https://www.geeksforgeeks.org/difference-between-sql-and-nosql/
 * https://www.geeksforgeeks.org/types-of-nosql-databases/
-* https://en.wikipedia.org/wiki/Non-structured_programming
+* https://www.geeksforgeeks.org/difference-between-sql-and-nosql/
+* https://www.geeksforgeeks.org/the-cap-theorem-in-dbms/
 * https://en.wikipedia.org/wiki/Assembly_language
-* https://en.wikipedia.org/wiki/Structured_program_theorem
-* https://en.wikipedia.org/wiki/Structured_programming
-* https://en.wikipedia.org/wiki/Go_To_Statement_Considered_Harmful / https://en.wikipedia.org/wiki/Goto#Criticism
+* https://en.wikipedia.org/wiki/Non-structured_programming
+* https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1
+* https://www.101computing.net/sequencing-selection-iteration/
 * https://en.wikipedia.org/wiki/Block_(programming)
 * https://en.wikipedia.org/wiki/Function_(computer_programming)
+* https://en.wikipedia.org/wiki/Structured_programming
 * https://en.wikipedia.org/wiki/Edsger_W._Dijkstra
 * https://en.wikipedia.org/wiki/Cyclomatic_complexity
-* https://www.azquotes.com/quote/585933
+* https://en.wikipedia.org/wiki/Object-oriented_programming
 * https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f
-
-* https://nl.wikipedia.org/wiki/Scheme
+* https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance
 * https://nl.wikipedia.org/wiki/Objectgeori%C3%ABnteerd
 * https://nl.wikipedia.org/wiki/Functioneel_programmeren
-* https://medium.com/geekculture/c-inheritance-memory-model-eac9eb9c56b5
 * https://nl.wikipedia.org/wiki/Lambdacalculus
 * https://en.wikipedia.org/wiki/Currying
+* https://fsharpforfunandprofit.com/
+* https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
+* https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland
+* https://nl.wikipedia.org/wiki/Mosaic_(browser)
+* https://assets.cambridge.org/97811070/49130/excerpt/9781107049130_excerpt.pdf
+* https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+* https://www.openapis.org/
+* https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%20Microsoft%20Azure%20Fundamentals/6.2.%20Capital%20Expenditure%20(CapEx)%20vs%20Operational%20Expenditure%20(OpEx).md
+* https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/
+* https://en.wikipedia.org/wiki/Quantum_computing

@@ -369,9 +369,9 @@ public VehicleSearchResponseDto articles(
 }
 ```
 
-De `@GetMapping("/articles")` adresseert een deel van de de A van de ABC. Maar een "request object", als complex type, bestaat niet in een kabel. Daarom moeten de *parameters* van het request als querystring parameters worden gedefinieerd voordat deze over een kabel kan worden aangeleverd aan de server. Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te poetsen maar ergens blijft het altijd schuren als je de grens van een paradigma (= de grens van een medium) oversteekt. In dit geval gaat het van OO naar Web (lees: van geheugen naar kabel). In geval van database interactie is het van OO naar RDBMS (lees: van geheugen naar disk).
+De `@GetMapping("/articles")` adresseert een deel van de de A van de ABC. Maar een "request object", als complex type, bestaat niet in een kabel. Daarom moeten de *parameters* van het request als querystring parameters worden gedefinieerd voordat deze over een kabel kunnen worden aangeleverd aan de server. Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te poetsen maar ergens blijft het altijd schuren als je de grens van een paradigma (= de grens van een medium) oversteekt. In dit geval gaat het van OO naar Web (lees: van geheugen naar kabel). In geval van database interactie is het van OO naar RDBMS (lees: van geheugen naar disk).
 
-> Crossing the boundaries of a paradigm always aches due to the paradigm mismatch (like object-relational mismatch).
+> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
 
 <aside style="background-color:#666;padding:1em;margin-bottom:1em;">
 
@@ -405,29 +405,35 @@ Wordt de "next big wave" [Quantum computing](https://en.wikipedia.org/wiki/Quant
 
 ## Afronding & Afsluiting
 
-Afsluitend en samenvattend:
+Samenvattend kom ik tot de volgende conclusies:
 
-A paradigm uses the language of the medium it lives on and who's issues/difficulties it tries to solve. It often has to do with state. It always has to do with money.
+Een paradigma probeert een probleem op te lossen van het medium waarop het "leeft" en gebruikt hierbij een taal die daarvan afhankelijk is. Het medium is een een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". En het heeft altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en kosten effectiever.
+
+Applicaties gebruiken veelal meerdere paradigma's. En:
+
+> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
 
 * Disk = durable state
 * Memory = volatile state
 * Processor = no state
-* Wire = no state/stick state
+* Wire = no state (backend) / sticky state (frontend)
 * Cloud = massive state
 
-Crossing the boundaries of a paradigm always aches due to the paradigm mismatch (like object-relational mismatch).
+Waarom gebruiken we:
+1. **Databases**: om efficiënter en kosteneffectiever schemagebonden (gestructureerde) gegevens op durable state (= disk) te beheren
+1. **NoSQL**:     om efficiënter en kosteneffectiever niet-schemagebonden (ongestructureerde) gegevens op (gedistribueerde) durable state te beheren
+1. **OO**:        om efficiënter en kosteneffectiever gegevens/complexiteit in volatile state (= geheugen) te beheren
+1. **FP**:        om efficiënter en kosteneffectiever data/functionaliteit te beheren zonder state (= processor)
+1. **Web**:       om efficiënter en kosteneffectiever locatie ongebonden gegevens te beheren zonder state (= kabel)
+1. **Cloud**:     om efficiënter en kosteneffectiever computers (serverparken) te beheren (datacenter)
 
-Why do we:
-1. databases: to manage (more efficiently and cost effectively) schema bound (structured) data on durable state (disk)
-1. NoSQL: to manage (more efficiently and cost effectively)  schemaless (unstructured) data on (distributed) durable state (disk)
-1. OO: to manage (more efficiently and cost effectively) data/complexity on volatile state (memory)
-1. FP: to manage (more efficiently and cost effectively) data/functionality without state (processor)
-1. Web: to manage (more efficiently and cost effectively) stateless data without location (wire) 
-1. Cloud: to manage (more efficiently and cost effectively) server parks (datacenter)
+<br /><br />
 
-
+---
 
 Enjoy coding<br />Stay curious<br />Keep thinking
+
+---
 
 ## Referenties
 
@@ -440,7 +446,7 @@ In volgorde van verschijning in de tekst:
 * https://vertabelo.com/blog/why-are-relational-databases-relational/
 * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
 * https://www.computerhistory.org/timeline/memory-storage/
-* https://en.wikipedia.org/wiki/Edgar_F._Codd)
+* https://en.wikipedia.org/wiki/Edgar_F._Codd
 * https://learnsql.com/blog/codd-article-databases/
 * https://learnsql.com/blog/history-of-sql/
 * https://en.wikipedia.org/wiki/Database_normalization

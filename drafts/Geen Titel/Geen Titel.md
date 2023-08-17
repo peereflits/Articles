@@ -78,7 +78,7 @@ Maar dit geheel terzijde :smile:
 
 Waarom gebruiken we relationele databases? 
 
-Omdat relationele databases al zo heel lang bestaan, zijn er, vanaf de jaren '70,  hele generaties programmeurs opgegegroeid met de alomtegenwoordige beschikbaarheid van databases als MySQL, Ms Access, SQL Server, Oracle e.a.. Daarbij is ook het denken in tabellen gemeengoed geworden. Dus als "we" denken in termen van "opslaan" van POJO's / POCO's / records / models / entities, dan denken we vrijwel meteen aan "tabellen". En *dus* aan relationele databases. Zelfs met de relatief recente komst van NoSQL databases is dat niet anders (ik kom hier nog op terug).
+Omdat relationele databases al zo heel lang bestaan, zijn er, vanaf de jaren '70,  hele generaties programmeurs opgegroeid met de alomtegenwoordige beschikbaarheid van databases als MySQL, Ms Access, SQL Server, Oracle e.a.. Daarbij is ook het denken in tabellen gemeengoed geworden. Dus als "we" denken in termen van "opslaan" van POJO's / POCO's / records / models / entities, dan denken we vrijwel meteen aan "tabellen". En *dus* aan relationele databases. Zelfs met de relatief recente komst van NoSQL databases is dat niet anders (ik kom hier nog op terug).
 
 Misschien moet ik de vraag anders stellen: *Wat* is het probleem dat relationele databases proberen op te lossen? 
 
@@ -127,7 +127,7 @@ De daarvan afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
 **Terzijde:** CRUD is slechts één van de drie drie taal varianten binnen SQL:
 1. **DML**: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE)
 1. **DDL**: Data Definition Language (CREATE, ALTER, DROP)
-1. **DAL**: Data Authorisation Language (GRANT, REVOKE, DENY)
+1. **DAL**: Data Authorization Language (GRANT, REVOKE, DENY)
 
 </aside>
 
@@ -443,6 +443,7 @@ In volgorde van verschijning in de tekst:
 * https://nl.wikipedia.org/wiki/Imperatief_programmeren
 * https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
 * https://nl.wikipedia.org/wiki/Programmeerparadigma
+* https://opentextbc.ca/dbdesign01/chapter/chapter-7-the-relational-data-model/
 * https://vertabelo.com/blog/why-are-relational-databases-relational/
 * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
 * https://www.computerhistory.org/timeline/memory-storage/

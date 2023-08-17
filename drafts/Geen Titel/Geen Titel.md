@@ -10,7 +10,7 @@ Ik weet daarbij heel goed *WAT* ik jullie wil gaan vertellen, maar nog niet goed
 
 Dit lijkt wel op het verschil tussen [declaratief-](https://nl.wikipedia.org/wiki/Declaratieve_taal) en [imperatief](https://nl.wikipedia.org/wiki/Imperatief_programmeren) programmeren.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;"><strong>Terzijde:</strong> In de informatica worden computertalen ingedeeld in declaratieve talen en imperatieve talen. Heel kort gezegd is  dat men in een declaratieve taal opschrijft *wat* er moet gebeuren, en in een imperatieve taal *hoe* iets moet gebeuren om wat te bereiken. Een volkomen helder onderscheid is niet te maken.</aside>
+<aside style="background-color:orange;padding:1em;margin-bottom:1em;"><strong>Terzijde:</strong> In de informatica worden computertalen ingedeeld in declaratieve talen en imperatieve talen. Heel kort gezegd is  dat men in een declaratieve taal opschrijft *wat* er moet gebeuren, en in een imperatieve taal *hoe* iets moet gebeuren om wat te bereiken. Een volkomen helder onderscheid is niet te maken.</aside>
 
 Of op een functie in een imperatieve taal: de signatuur van een functie openbaart "*wat*" het doet; een functie body beschrijft "*hoe*" het dat doet.
 

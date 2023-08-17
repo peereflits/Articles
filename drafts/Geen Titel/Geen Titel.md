@@ -25,16 +25,13 @@ public int Add(int term1, int term2) {
 
 De functie signatuur (de *wat*) vertelt dat het twee getallen optelt en het resultaat (de som) ervan terug geeft. De functie body (de *hoe*) zegt dat zij dit doet door de eerste input variabele te vermenigvuldigen met de tweede.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-Overigens: zien jullie *alle* fouten in de deze code? Het zijn er drie! En deze drie zijn elk te verdelen in een aparte categorie. Ga uit van de aanroep `Add(2147483646, 2);`.
-
-1. Logisch fout: deze is het gevolg van een verschil tussen *daadwerkelijke* uitkomsten en *verwachte* uitkomsten;<br />
+> **Note**
+> Overigens: zien jullie *alle* fouten in de deze code? Het zijn er drie! En deze drie zijn elk te verdelen in een aparte categorie. Ga uit van de aanroep `Add(2147483646, 2);`.
+>
+> 1. Logisch fout: deze is het gevolg van een verschil tussen *daadwerkelijke* uitkomsten en *verwachte* uitkomsten;<br />
 Het resultaat van de functie, afgaande op de naam van de functie, zou `2147483648` moeten zijn, niet `4294967294`.<br/>**PS:** Het meeste venijnige in deze is dat het expliciet mijn bedoeling is om jullie op het verkeerde been te zetten. Als dat is gelukt, dan is de functie dus goed :smile:; Maar natuurlijk is deze "fout" een flagrante schending van het adagium "Use Intention-Revealing Names". Zie pagina 18 in [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
-1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br />Wat gebeurt er als de aanroep plaats vindt? Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
-1. Functioneel fout: is fout wanneer een functie minder kan of doet (of juist te veel kan/doet) dan wat er wordt verwacht.<br />Zie bijvoorbeeld: `Add(1.5, 3.333);` of `Add(1,2,3);`.
-
-</aside>
+> 1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br />Wat gebeurt er als de aanroep plaats vindt? Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
+> 1. Functioneel fout: is fout wanneer een functie minder kan of doet (of juist te veel kan/doet) dan wat er wordt verwacht.<br />Zie bijvoorbeeld: `Add(1.5, 3.333);` of `Add(1,2,3);`.
 
 Maar goed, ik dwaal af. Ik wilde het gaan hebben over een aantal paradigma's binnen software ontwikkeling.
 

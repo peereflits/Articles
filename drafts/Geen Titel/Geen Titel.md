@@ -28,10 +28,10 @@ De functie signatuur (de *wat*) vertelt dat het twee getallen optelt en het resu
 > **Note**
 > Overigens: zien jullie *alle* fouten in de deze code? Het zijn er drie! En deze drie zijn elk te verdelen in een aparte categorie. Ga uit van de aanroep `Add(2147483646, 2);`.
 >
-> 1. Logisch fout: deze is het gevolg van een verschil tussen *daadwerkelijke* uitkomsten en *verwachte* uitkomsten;<br />
+> 1. Logisch fout: deze is het gevolg van een verschil tussen *daadwerkelijke* uitkomsten en *verwachte* uitkomsten;<br/>
 Het resultaat van de functie, afgaande op de naam van de functie, zou `2147483648` moeten zijn, niet `4294967294`.<br/>**PS:** Het meeste venijnige in deze is dat het expliciet mijn bedoeling is om jullie op het verkeerde been te zetten. Als dat is gelukt, dan is de functie dus goed :smile:; Maar natuurlijk is deze "fout" een flagrante schending van het adagium "Use Intention-Revealing Names". Zie pagina 18 in [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882).
-> 1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br />Wat gebeurt er als de aanroep plaats vindt? Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
-> 1. Functioneel fout: is fout wanneer een functie minder kan of doet (of juist te veel kan/doet) dan wat er wordt verwacht.<br />Zie bijvoorbeeld: `Add(1.5, 3.333);` of `Add(1,2,3);`.
+> 1. Technisch fout: is een fout als gevolg van wijzigingen "in de omgeving" en/of het gebruik waarop niet is geanticipeerd;<br/>Wat gebeurt er als de aanroep plaats vindt? Defensief programmeren, goede foutafhandeling en de filosofie hanteren "Never trust public input", zijn methoden om dit soort fouten enigszins tegen te gaan;
+> 1. Functioneel fout: is fout wanneer een functie minder kan of doet (of juist te veel kan/doet) dan wat er wordt verwacht.<br/>Zie bijvoorbeeld: `Add(1.5, 3.333);` of `Add(1,2,3);`.
 
 Maar goed, ik dwaal af. Ik wilde het gaan hebben over een aantal paradigma's binnen software ontwikkeling.
 
@@ -170,7 +170,7 @@ Functie modules uit die vroege tijd waren (soms) enorme libraries met niets ande
 
 Nu weten we allemaal dat als het aantal parameters van een functie toeneemt, de [cyclomatische complexiteit](https://en.wikipedia.org/wiki/Cyclomatic_complexity) navenant toeneemt == toenemende complexiteit. En we weten ook: **Complexity kills!**
 
-![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br />-- *Ray Ozzie* --
+![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br/>-- *Ray Ozzie* --
 
 Toen een aantal knappe koppen hierover nadachten, ontstond het idee: als we nu eens het gedrag en de bijbehorende data van een functionaliteit (= één functie) zouden kunnen encapsuleren in één construct, één ding, één object ... ? En voilà: hier heb je "object oriëntatie".
 
@@ -202,8 +202,7 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 #### Over Abstraction, Inheritance en Polymorphism
 
-> Program against abstractions, not concretions.
-> *OO Design principle*
+> Program against abstractions, not concretions.<br/>-- *OO Design principle* --
 
 Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
 
@@ -244,11 +243,11 @@ In dat artikel legde de auteur uit dat in een objecten-hiërarchie van overerfde
 > **Note**
 > Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat zelf moet doen (lees: null-pointers). In o.a. C++ kan dit nog steeds. Het is duidelijk zien in de beschikbare methoden om zelf geheugenblokken te kunnen alloceren/de-alloceren en het kunnen werken mat pointers(*) en geheugenadressen (&). Java & .NET/C# zijn ook "expres" uitgevonden om o.a. dit probleem op te lossen.
 
->	OO is about managing state.<br/>-- *General opinion* --
-
 Van OO wordt ook wel gezegd dat het gaat om het managen van state. Inheritance = herbruikbaarheid van functionaliteit + herbruikbaarheid van code + herbruikbaarheid van geheugen.
 
-Een kenmerk van (RAM-)geheugen is dat zij zeer vluchtig is. `RAM =  volatile state`. De grammatica van het managen deze "volatile state" bestaat uit begrippen als: heap, stack, struct, v-table, allocation, de-allocation, GC, lock e.a.. en is een zeer complexe aangelegenheid. [Object oriëntatie](https://nl.wikipedia.org/wiki/Objectgeori%C3%ABnteerd) is o.a. een poging een antwoord te geven op dit complexe probleem.
+> OO is about managing state.<br/>-- *General opinion* --
+
+Een kenmerk van (RAM-)geheugen is dat zij zeer vluchtig is. `RAM == volatile state`. De grammatica van het managen deze "volatile state" bestaat uit begrippen als: heap, stack, struct, v-table, allocation, de-allocation, GC, lock e.a.. en is een zeer complexe aangelegenheid. [Object oriëntatie](https://nl.wikipedia.org/wiki/Objectgeori%C3%ABnteerd) is o.a. een poging een antwoord te geven op dit complexe probleem.
 
 
 ## Functional programming (FP)
@@ -283,14 +282,14 @@ https://fsharpforfunandprofit.com/) is een site die mij (destijds) veel inzicht 
 
 Internet is niet meer uit ons leven weg te denken. Sterker nog: een ieder die dit leest, dankt (direct of indirect) zijn brood eraan. Velen van ons werken aan web api's of het consumeren ervan.
 
-Maar wat is het aan internet dat het zo immens populair is geworden? Eén van de grootste problemen die internet oplost, is de lokaliteit van data.<br />**NB:** Op technisch niveau lost het het probleem van PRC (remote procedure call) op.
+Maar wat is het aan internet dat het zo immens populair is geworden? Eén van de grootste problemen die internet oplost, is de lokaliteit van data.<br/>**NB:** Op technisch niveau lost het het probleem van PRC (remote procedure call) op.
 
 In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fiets, met in hun hand een broodtrommel met pons-kaarten, naar een rekencentrum om hun code de laten compileren en uit te voeren. Mainframes hadden terminals waar programmeurs naar toe moesten gaan om iets van een computer gedaan te krijgen. 
 
 In de jaren '80, met de komst van de PC, werd dit probleem deels verholpen. Na de Mainframe, ontstonden nu client-server systemen. Met name bij "fat-clients" rees het probleem: hoe krijg ik een nieuwe versie van mijn client applicatie op de PC van de gebruiker? Spoiler alert: internet!
 
 > **Note**
-> De mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br />Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
+> De mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br/>Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
 
 De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten. 
 
@@ -387,13 +386,15 @@ Waarom gebruiken we:
 1. **Web**:       om efficiënter en kosteneffectiever locatie ongebonden gegevens te beheren zonder state (= kabel)
 1. **Cloud**:     om efficiënter en kosteneffectiever computers (serverparken) te beheren (datacenter)
 
-<br /><br />
+<br/><br/>
 
 ---
 
-Enjoy coding<br />Stay curious<br />Keep thinking
+Enjoy coding<br/>Stay curious<br/>Keep thinking
 
 ---
+
+<br/><br/>
 
 ## Referenties
 

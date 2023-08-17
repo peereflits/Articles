@@ -1,6 +1,6 @@
 # Geen Titel
 
-## Inroductie
+## Introductie
 
 Welkom bij dit artikel (deze sessie) die ik express nog geen titel heb gegeven. Mijn naam is Peereflits en werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. En in al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enige contemplatie hierover, in mijn brein zijn gaan nestelen en van daaruit een verhaal zijn gaan spinnen, dat ik jullie graag wil gaan vertellen. Dat verhaal gaat over software, een stukje geschiedenis ervan, programmeer paradigma's en wat de essentie en consequentie hiervan is. 
 

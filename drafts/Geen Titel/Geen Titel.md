@@ -148,10 +148,7 @@ Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis va
 
 ### De geschiedenis van toenemende complexiteit
 
-> In the beginning when we had no computers, we had no problems.
-> Then when we had small computers, we had small problems.
-> Now that we have big computers, we have big problems.
-> *Edsger W. Dijkstra*
+> In the beginning when we had no computers, we had no problems.<br/>Then when we had small computers, we had small problems.<br/>Now that we have big computers, we have big problems.<br/><cite>-- Edsger W. Dijkstra --</cite>
 
 Toen de eerste computers werden ontwikkeld, bestond het beroep "software ontwikkelaar" niet. De eerste programma's die werden geschreven bestonden vooral uit een enorme sequentie van uitgeschreven processor instructies. Het scopen van routines was slechts mogelijk door het toepassen van `GOTO` statements. Hierdoor waren computer programma's nauwelijks leesbaar en werd dit soort code al snel "spaghetti code" genoemd. De programma's werden geschreven in o.a. [assembly/assembler language](https://en.wikipedia.org/wiki/Assembly_language), vroege versies van BASIC, Fortran of COBOL. Batch files zijn nog een voorbeeld van [non-structured programming](https://en.wikipedia.org/wiki/Non-structured_programming), zoals de talen uit die tijd ('50/'60) werden genoemd. Een belangrijk kenmerk van code uit die tijd was de scoping van routines door `GOTO`.
 

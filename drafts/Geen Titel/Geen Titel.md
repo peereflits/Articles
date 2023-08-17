@@ -142,13 +142,13 @@ Om een probleem op te lossen! De aanvoerder van de oplossing heet niet voor niet
 Object oriëntatie is een antwoord op het probleem van toenemende complexiteit.
 
 > Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.
-> *Peereflits*
+> -- *Peereflits* --
 
 Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis van computers en hun programmeertalen eens bekijken.
 
 ### De geschiedenis van toenemende complexiteit
 
-> In the beginning when we had no computers, we had no problems.<br/>Then when we had small computers, we had small problems.<br/>Now that we have big computers, we have big problems.<br/>*-- Edsger W. Dijkstra --*
+> In the beginning when we had no computers, we had no problems.<br/>Then when we had small computers, we had small problems.<br/>Now that we have big computers, we have big problems.<br/>-- *Edsger W. Dijkstra* --
 
 Toen de eerste computers werden ontwikkeld, bestond het beroep "software ontwikkelaar" niet. De eerste programma's die werden geschreven bestonden vooral uit een enorme sequentie van uitgeschreven processor instructies. Het scopen van routines was slechts mogelijk door het toepassen van `GOTO` statements. Hierdoor waren computer programma's nauwelijks leesbaar en werd dit soort code al snel "spaghetti code" genoemd. De programma's werden geschreven in o.a. [assembly/assembler language](https://en.wikipedia.org/wiki/Assembly_language), vroege versies van BASIC, Fortran of COBOL. Batch files zijn nog een voorbeeld van [non-structured programming](https://en.wikipedia.org/wiki/Non-structured_programming), zoals de talen uit die tijd ('50/'60) werden genoemd. Een belangrijk kenmerk van code uit die tijd was de scoping van routines door `GOTO`.
 

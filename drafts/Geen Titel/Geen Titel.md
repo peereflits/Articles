@@ -54,7 +54,9 @@ De thema's die ik wil bespreken zijn:
 Wie maakt er bij het maken van nieuwe applicaties gebruik van een database? En wie van jullie een *relationele* database?
 
 > **Note**
-> Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
+> Begin note "Wat is het "relationele" aan een relationele database?"
+
+Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
 
 ![Figuur 1](table.png)<br/>*Figuur 1*
 
@@ -67,6 +69,9 @@ Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waard
 Zie: [Why are Relational Databases “Relational”?](https://vertabelo.com/blog/why-are-relational-databases-relational/)
 
 Maar dit geheel terzijde :smile:
+
+> **Note**
+> Einde note "Wat is het "relationele" aan een relationele database?"
 
 Waarom gebruiken we relationele databases? 
 
@@ -138,7 +143,8 @@ Om een probleem op te lossen! De aanvoerder van de oplossing heet niet voor niet
 
 Object oriëntatie is een antwoord op het probleem van toenemende complexiteit.
 
-> Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.<br /><cite>-- Marcel --</cite>
+> Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.
+> <cite>-- Peereflits --</cite>
 
 Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis van computers en hun programmeertalen eens bekijken.
 
@@ -148,19 +154,13 @@ Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis va
 
 Toen de eerste computers werden ontwikkeld, bestond het beroep "software ontwikkelaar" niet. De eerste programma's die werden geschreven bestonden vooral uit een enorme sequentie van uitgeschreven processor instructies. Het scopen van routines was slechts mogelijk door het toepassen van `GOTO` statements. Hierdoor waren computer programma's nauwelijks leesbaar en werd dit soort code al snel "spaghetti code" genoemd. De programma's werden geschreven in o.a. [assembly/assembler language](https://en.wikipedia.org/wiki/Assembly_language), vroege versies van BASIC, Fortran of COBOL. Batch files zijn nog een voorbeeld van [non-structured programming](https://en.wikipedia.org/wiki/Non-structured_programming), zoals de talen uit die tijd ('50/'60) werden genoemd. Een belangrijk kenmerk van code uit die tijd was de scoping van routines door `GOTO`.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** De basis van elke programmeertaal bestaat uit drie "[programming constructs](https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1)": [sequentie, selectie & iteratie](https://www.101computing.net/sequencing-selection-iteration/).
-
-</aside>
+> **Note**
+> De basis van elke programmeertaal bestaat uit drie "[programming constructs](https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1)": [sequentie, selectie & iteratie](https://www.101computing.net/sequencing-selection-iteration/).
 
 Om de problemen van "spaghetti code" het hoofd te kunnen bieden werden er aan computer talen [block structures](https://en.wikipedia.org/wiki/Block_(programming))" en [subroutines (functions)](https://en.wikipedia.org/wiki/Function_(computer_programming)) toegevoegd. En zo ontstond "[structured programming](https://en.wikipedia.org/wiki/Structured_programming)". Een belangrijk kenmerk van "Structured programming" is dat routines gescoped worden door "functions" en/of subroutines.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** De Nederlands professor [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) valt de eer ten deel de term "structured programming" te hebben uitgevonden.
-
-</aside>
+> **Note**
+> De Nederlands professor [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) valt de eer ten deel de term "structured programming" te hebben uitgevonden.
 
 En toen was het leven weer mooi. Totdat ...
 
@@ -168,12 +168,8 @@ Zoals jullie weten kan je aan functies parameters meegegeven. En hier begint het
 
 Functie modules uit die vroege tijd waren (soms) enorme libraries met niets anders dan alleen maar (publieke) methodes. Windows libraries als `kernel32.dll` en `user32.dll` zijn nog steeds niets anders dan grote bakken met "procedurele" functies. En als een methode/functie meer of andere functionaliteit moest gaan ondersteunen, dan werden er vaak parameters aan een functie toegevoegd om die functionaliteit te kunnen ondersteunen.
 
-
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Ik ben ooit eens een methode tegen gekomen (in Visual Basic) waarbij de signatuur uit 22 parameters bestond en 2409 karakters lang was om te lezen. De functie body was een enorme spaghetti van `If-Then-Else`-en en loops. Deze was meer dan 800 regels lang. :cry:
-
-</aside>
+> **Note**
+> Ik ben ooit eens een methode tegen gekomen (in Visual Basic) waarbij de signatuur uit 22 parameters bestond en 2409 karakters lang was om te lezen. De functie body was een enorme spaghetti van `If-Then-Else`-en en loops. Deze was meer dan 800 regels lang. :cry:
 
 Nu weten we allemaal dat als het aantal parameters van een functie toeneemt, de [cyclomatische complexiteit](https://en.wikipedia.org/wiki/Cyclomatic_complexity) navenant toeneemt == toenemende complexiteit. En we weten ook: **Complexity kills!**
 
@@ -199,9 +195,8 @@ Dit wordt veelal gedefinieerd als dat de interne representatie van een object (=
 
 Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, over het inkapselen van gedrag en de daarmee corresponderende data in één construct. Het probleem bij structured programming was dat methoden/functies steeds meer parameters kregen waardoor de complexiteit toenam. Door de parameters van een functie als losse fields/properties op te nemen in een construct, kan de functie vereenvoudigen (en mogelijk meerdere functies worden). En dat "construct" kennen we in OO-talen als `class`. 
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Naar mate een applicatie meer een "Line of Business" applicatie is, worden classes meer data-georiënteerd (record-like). Wanneer een library meer framework-achtige trekken krijgt, krijgen `classes` een meer functie georiënteerd karakter waarin de uitgangspunten van OO beter tot hun recht komen.
+> **Note**
+> Naar mate een applicatie meer een "Line of Business" applicatie is, worden classes meer data-georiënteerd (record-like). Wanneer een library meer framework-achtige trekken krijgt, krijgen `classes` een meer functie georiënteerd karakter waarin de uitgangspunten van OO beter tot hun recht komen.
 
 ![Framework orientation vs LOB-orientation](./framework_lob.png)
 
@@ -209,11 +204,13 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 #### Over Abstraction, Inheritance en Polymorphism
 
-> OO Design principle: Program against abstractions, not concretions.
+> Program against abstractions, not concretions.
+> <cite>-- OO Design principle --</cite>
 
 Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
 
-> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br /><cite>--- Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/) ---</cite>
+> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.
+> <cite>--- Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/) ---</cite>
 
 Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt. 
 
@@ -231,27 +228,29 @@ Er wordt in alle drie de gevallen gebruik gemaakt van de inheritance operator "`
 
 Toen OO een grote vlucht begon te nemen, werd "inheritance" bejubeld als één van haar meest belangrijkste features. Maar dit jubelen werd vooral gedaan door IT-managers die "inheritance" vooral vertaalde in herbruikbaarheid. In de documentatie van Microsoft wordt dit nog steeds aangehaald:
 
-> Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.<br /><cite>-- [bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance) ---</cite>
+> Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.
+> <cite>-- [bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance) ---</cite>
 
 Ik maak een functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".
 
 De developer blij want eenvoudig (ahum). De manager blij want de developer is sneller klaar (met minder bugs). Bedrijf blij, want sneller = goedkoper.
 
-> OO Design principle: Favor polymorphism over inheritance.
+> Favor polymorphism over inheritance.
+> <cite>-- OO Design principle --</cite>
 
 Maar er zit nog een ander verhaal achter deze "inheritance" / herbruikbaarheid. En deze begint bij de vraag: waar "leeft" een (in een OO-taal geschreven) programma? In welk medium?
 
-Programma's leven primair in het RAM-geheugen van een computer. Dat zal niemand verbazen. Computertalen en compilers moeten dus slim kunnen omgaan met geheugen en het beheren ervan. De werkelijk reden achter de contract georiënteerdheid van OO zit in het feit dat met "fixed contracts" geheugenblokken beter zijn te beheren. 
+Programma's leven primair in het RAM-geheugen van een computer. Dat zal niemand verbazen. Computertalen en compilers moeten dus slim kunnen omgaan met geheugen en het beheren ervan. De werkelijk reden achter de contractgeoriënteerdheid van OO zit in het feit dat met "fixed contracts" geheugenblokken beter zijn te beheren. 
 
 En hier begint mijn redenatie wankel te worden. Ik heb jaren geleden een artikel gelezen dat de start betekende van dit verhaal. Dat artikel kan ik helaas niet meer terugvinden. Vooral één van de afbeeldingen erbij was voor mij een eye-opener. Het eerste kwartje viel!
 
 In dat artikel legde de auteur uit dat in een objecten-hiërarchie van overerfde objecten in een OO-programmeertaal (C++?) delen van geheugenblokken werden hergebruikt omdat zij dezelfde geheugen-layout deelden. Iets met pointers, structs en v-tables enzovoort. In de afbeelding eronder was dit schematisch zeer verhelderend uitgetekend. Het hebben van dezelfde geheugen-layout was mogelijk doordat er aan een "contract" werd voldaan (een vis "is-een" dier). Hierdoor konden geheugenblokken worden gedeeld en werd geheugenruimte genormaliseerd (lees: als in database-normalisatie). Deze normalisatie leidde dan tot kleinere memory-footprint en dat was weer voordelig. Want in die tijd was geheugen duur en zeker niet onbeperkt adresseerbaar (wie kent de 640Kb limiet in MS-Dos nog?).
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat zelf moet doen (lees: null-pointers). In o.a. C++ kan dit nog steeds. Het is duidelijk zien in de beschikbare methoden om zelf geheugenblokken te kunnen alloceren/de-alloceren en het kunnen werken mat pointers(*) en geheugenadressen (&). Java & .NET/C# zijn ook "expres" uitgevonden om o.a. dit probleem op te lossen.
-</aside>
+> **Note**
+> Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat zelf moet doen (lees: null-pointers). In o.a. C++ kan dit nog steeds. Het is duidelijk zien in de beschikbare methoden om zelf geheugenblokken te kunnen alloceren/de-alloceren en het kunnen werken mat pointers(*) en geheugenadressen (&). Java & .NET/C# zijn ook "expres" uitgevonden om o.a. dit probleem op te lossen.
 
->	OO is about managing state
+>	OO is about managing state.
+> <cite>-- General opinion --</cite>
 
 Van OO wordt ook wel gezegd dat het gaat om het managen van state. Inheritance = herbruikbaarheid van functionaliteit + herbruikbaarheid van code + herbruikbaarheid van geheugen.
 
@@ -266,11 +265,13 @@ Maar waarom zijn er functionele talen (en het bijbehorende paradigma) nodig? De 
 
 Toen ik eens, jaren geleden, een sessie bij [gebruikersgroep dotNed](https://www.dotned.nl/) bijwoonde, waarin [Oliver Sturm](https://www.linkedin.com/in/oliversturm/) het één en ander over FP uitlegde, viel het tweede kwartje.
 
+
 ### Het probleem van OO
 
 In OO, zoals we hiervoor hebben kunnen zien, wordt gedrag en "state" geëncapsuleerd in een `class`. En de interne state van een object mag natuurlijk niet worden geopenbaard aan de buitenwereld. De interne state mag alleen gewijzigd worden door de publieke methoden (mutators) van een object. En deze mutators dienen dan ook zeer nauwgezet de parameters te inspecteren en de interne state te valideren voordat de state wordt gewijzigd. Programmeren is mensenwerk (ondanks de recente komst van ChatGPT). En mensen maken fouten. De state van een object wordt vaker "gelekt" dan lief is, wat weer allerlei side-effects doet ontstaan, wat weer fouten oplevert, wat weer kosten/ergernis/complexiteit ... You get the drill.
 
 Managing state is complex. En "OO is about managing state". Enter Functional programming
+
 
 ### Het Functionele paradigma 101
 
@@ -294,11 +295,8 @@ In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fi
 
 In de jaren '80, met de komst van de PC, werd dit probleem deels verholpen. Na de Mainframe, ontstonden nu client-server systemen. Met name bij "fat-clients" rees het probleem: hoe krijg ik een nieuwe versie van mijn client applicatie op de PC van de gebruiker? Spoiler alert: internet!
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** de mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br />Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
-
-</aside>
+> **Note**
+> de mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br />Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
 
 De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten. 
 
@@ -310,15 +308,12 @@ Dus rest ons applicaties te ontwikkelen "op internet". Deze applicaties bestaan 
 
 [\*] De term/begrip "client-server" blijft rudimentair toch bestaan.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-De front-end stack bestaat uit drie verschillende technologieën die ieder een eigen verantwoordelijkheid hebben ten aanzien van de inhoud: 
-
-* HTML = Structure of content (declaratief)
-* CSS = Layout of content (declaratief)
-* JS/WASM = Behaviour of content (imperatief)
-
-</aside>
+> **Note**
+> De front-end stack bestaat uit drie verschillende technologieën die ieder een eigen verantwoordelijkheid hebben ten aanzien van de inhoud: 
+>
+> * HTML = Structure of content (declaratief)
+> * CSS = Layout of content (declaratief)
+> * JS/WASM = Behaviour of content (imperatief)
 
 Maar de essentie van een web applicatie is, dat zij "leeft" op de kabel (Wifi is een virtuele kabel). En een kabel is stateless. In een kabel kan een signaal alleen van de client naar de server of van de server naar de client gaan. En hiermee is het Request/Response model een feit.
 
@@ -348,14 +343,11 @@ public VehicleSearchResponseDto articles(
 De `@GetMapping("/articles")` adresseert een deel van de de A van de ABC. Maar een "request object", als complex type, bestaat niet in een kabel. Daarom moeten de *parameters* van het request als querystring parameters worden gedefinieerd voordat deze over een kabel kunnen worden aangeleverd aan de server. Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te poetsen maar ergens blijft het altijd schuren als je de grens van een paradigma (= de grens van een medium) oversteekt. In dit geval gaat het van OO naar Web (lees: van geheugen naar kabel). In geval van database interactie is het van OO naar RDBMS (lees: van geheugen naar disk).
 
 > Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
+> <cite>-- Peereflits --</cite>
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-In zowel Java/spring als in .NET core wordt tegenwoordig alleen nog als binding JSON over HTTP gebruikt. Protocols als SOAP over HTTP, SOAP over TCP en SOAP over MQ zijn in onbruik geraakt. Als *contract* is [OpenAPI](https://www.openapis.org/) in zwang geraakt.
-
-**NB:** SOAP gebruikte WSDL als contract taal.
-
-</aside>
+> **Note**
+> In zowel Java/spring als in .NET core wordt tegenwoordig alleen nog als binding JSON over HTTP gebruikt. Protocols als SOAP over HTTP, SOAP over TCP en SOAP over MQ zijn in onbruik geraakt. Als *contract* is [OpenAPI](https://www.openapis.org/) in zwang geraakt.
+> **NB:** SOAP gebruikte WSDL als contract taal.
 
 Hoewel een kabel stateless is van nature, kennen web applicaties een hybride form van state die ook wel "sticky state" wordt genoemd. Hierbij wordt de state in een request verschaft door het gebruik van HTTP headers, query strings, cookies of request body (POST/PUT only). Hierbij ligt de state bij de client van de web applicatie en leunt deze op de statefulness van het apparaat (=desktop/laptop/tablet/smartphone).
 

@@ -54,20 +54,7 @@ De thema's die ik wil bespreken zijn:
 Wie maakt er bij het maken van nieuwe applicaties gebruik van een database? En wie van jullie een *relationele* database?
 
 > **Note**
-> Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
-
-![Figuur 1](table.png)<br/>*Figuur 1* 
-
-![Figuur 2](erd.png)<br/>*Figuur 2* 
- 
-> **Note**
-> Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde van een veld wordt gevonden op het snijpunt van een tuple en een domain. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.
-
-![A table is called a relation](table_is_relation.png)<br/>*Figuur 2* 
-
-> **Note**
-> Zie: [Why are Relational Databases “Relational”?](https://vertabelo.com/blog/why-are-relational-databases-relational/)
-> Maar dit geheel terzijde :smile:
+> Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?<br/><br/>![Figuur 1](table.png)<br/>*Figuur 1*<br/><br/>![Figuur 2](erd.png)<br/>*Figuur 2*<br/><br/>Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde van een veld wordt gevonden op het snijpunt van een tuple en een domain. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.<br/>![A table is called a relation](table_is_relation.png)<br/>*Figuur 2*<br/><br/>Zie: [Why are Relational Databases “Relational”?](https://vertabelo.com/blog/why-are-relational-databases-relational/)<br/>Maar dit geheel terzijde :smile:
 
 Waarom gebruiken we relationele databases? 
 

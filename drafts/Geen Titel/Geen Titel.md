@@ -85,7 +85,6 @@ Voordat er relationele databases bestonden moesten programmeurs zelf systemen (=
 
 > **Note**
 > Voor een overzicht van disk- & memory storage, zie:
-> 
 > * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
 > * https://www.computerhistory.org/timeline/memory-storage/
 
@@ -97,7 +96,6 @@ Op basis van dit artikel is later [SQL ontstaan](https://learnsql.com/blog/histo
 > Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. Maar betekent niet dat wij (= developers) niet meer hoeven na te denken over hoe we zaken in een database opslaan. De kosten van opslag behelzen meer dan alleen de kosten van disk/GB. Denk hierbij ook aan de grootte in geheugen, de grootte "on te wire" en de tijd die nodig is om gegevens (of een bestand) te verwerken!
 >
 > `More disk size == more read/write time == more throughput == more bandwidth == more memory usage == more energy == more money`
->
 
 De essentie van databases is dat zij "leeft" op de harde schijf; hoewel sommige "disks" weinig meer met schijven de maken hebben, leeft de database, in essentie, op disk (de 'D' in SSD is nog steeds die van "disk"). Dit medium, disk, kent zijn eigen taal: `READ` & `WRITE`. 
 
@@ -144,13 +142,16 @@ Om een probleem op te lossen! De aanvoerder van de oplossing heet niet voor niet
 Object oriëntatie is een antwoord op het probleem van toenemende complexiteit.
 
 > Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.
-> <cite>-- Peereflits --</cite>
+> *Peereflits*
 
 Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis van computers en hun programmeertalen eens bekijken.
 
 ### De geschiedenis van toenemende complexiteit
 
-> In the beginning when we had no computers, we had no problems.<br />Then when we had small computers, we had small problems.<br />Now that we have big computers, we have big problems.<br /><cite>-- Edsger W. Dijkstra --</cite>
+> In the beginning when we had no computers, we had no problems.
+> Then when we had small computers, we had small problems.
+> Now that we have big computers, we have big problems.
+> *Edsger W. Dijkstra*
 
 Toen de eerste computers werden ontwikkeld, bestond het beroep "software ontwikkelaar" niet. De eerste programma's die werden geschreven bestonden vooral uit een enorme sequentie van uitgeschreven processor instructies. Het scopen van routines was slechts mogelijk door het toepassen van `GOTO` statements. Hierdoor waren computer programma's nauwelijks leesbaar en werd dit soort code al snel "spaghetti code" genoemd. De programma's werden geschreven in o.a. [assembly/assembler language](https://en.wikipedia.org/wiki/Assembly_language), vroege versies van BASIC, Fortran of COBOL. Batch files zijn nog een voorbeeld van [non-structured programming](https://en.wikipedia.org/wiki/Non-structured_programming), zoals de talen uit die tijd ('50/'60) werden genoemd. Een belangrijk kenmerk van code uit die tijd was de scoping van routines door `GOTO`.
 
@@ -173,9 +174,10 @@ Functie modules uit die vroege tijd waren (soms) enorme libraries met niets ande
 
 Nu weten we allemaal dat als het aantal parameters van een functie toeneemt, de [cyclomatische complexiteit](https://en.wikipedia.org/wiki/Cyclomatic_complexity) navenant toeneemt == toenemende complexiteit. En we weten ook: **Complexity kills!**
 
-![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br /><cite>-- Ray Ozzie --</cite>
+![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br /><cite>-- Ray Ozzie*
 
 Toen een aantal knappe koppen hierover nadachten, ontstond het idee: als we nu eens het gedrag en de bijbehorende data van een functionaliteit (= één functie) zouden kunnen encapsuleren in één construct, één ding, één object ... ? En voilà: hier heb je "object oriëntatie".
+
 
 ### Object oriëntatie (OO) 101
 
@@ -189,6 +191,7 @@ Wie weet wat de vier uitgangspunten van OO zijn? Zoek maar eens op internet naar
 
 De definities die veelal worden gegeven bij elk van deze begrippen worden vaak van andere bronnen overgenomen. En daardoor is er volgens mij informatie verloren gegaan die kan bijdragen aan het beter begrijpen van OO (in de tegenwoordige context).
 
+
 #### Over Encapsulation
 
 Dit wordt veelal gedefinieerd als dat de interne representatie van een object (=state) niet zichtbaar is buiten het object. Gewoonlijk kunnen alleen de eigen methoden van het object (=state) de velden rechtstreeks inspecteren of manipuleren. Vaak wordt in één adem met encapsulatie "acces modifiers" (`public`, `internal`, `protected`, `private`) genoemd als de manier waarop dit wordt gerealiseerd. 
@@ -200,17 +203,16 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 ![Framework orientation vs LOB-orientation](./framework_lob.png)
 
-</aside>
 
 #### Over Abstraction, Inheritance en Polymorphism
 
 > Program against abstractions, not concretions.
-> <cite>-- OO Design principle --</cite>
+> *OO Design principle*
 
 Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
 
 > Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.
-> <cite>--- Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/) ---</cite>
+> *Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/)*
 
 Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt. 
 
@@ -229,14 +231,14 @@ Er wordt in alle drie de gevallen gebruik gemaakt van de inheritance operator "`
 Toen OO een grote vlucht begon te nemen, werd "inheritance" bejubeld als één van haar meest belangrijkste features. Maar dit jubelen werd vooral gedaan door IT-managers die "inheritance" vooral vertaalde in herbruikbaarheid. In de documentatie van Microsoft wordt dit nog steeds aangehaald:
 
 > Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.
-> <cite>-- [bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance) ---</cite>
+> *[bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)*
 
 Ik maak een functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".
 
 De developer blij want eenvoudig (ahum). De manager blij want de developer is sneller klaar (met minder bugs). Bedrijf blij, want sneller = goedkoper.
 
 > Favor polymorphism over inheritance.
-> <cite>-- OO Design principle --</cite>
+> *OO Design principle*
 
 Maar er zit nog een ander verhaal achter deze "inheritance" / herbruikbaarheid. En deze begint bij de vraag: waar "leeft" een (in een OO-taal geschreven) programma? In welk medium?
 
@@ -250,7 +252,7 @@ In dat artikel legde de auteur uit dat in een objecten-hiërarchie van overerfde
 > Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat zelf moet doen (lees: null-pointers). In o.a. C++ kan dit nog steeds. Het is duidelijk zien in de beschikbare methoden om zelf geheugenblokken te kunnen alloceren/de-alloceren en het kunnen werken mat pointers(*) en geheugenadressen (&). Java & .NET/C# zijn ook "expres" uitgevonden om o.a. dit probleem op te lossen.
 
 >	OO is about managing state.
-> <cite>-- General opinion --</cite>
+> *General opinion*
 
 Van OO wordt ook wel gezegd dat het gaat om het managen van state. Inheritance = herbruikbaarheid van functionaliteit + herbruikbaarheid van code + herbruikbaarheid van geheugen.
 
@@ -310,10 +312,9 @@ Dus rest ons applicaties te ontwikkelen "op internet". Deze applicaties bestaan 
 
 > **Note**
 > De front-end stack bestaat uit drie verschillende technologieën die ieder een eigen verantwoordelijkheid hebben ten aanzien van de inhoud: 
->
 > * HTML = Structure of content (declaratief)
 > * CSS = Layout of content (declaratief)
-> * JS/WASM = Behaviour of content (imperatief)
+> * JS/WASM = Behavior of content (imperatief)
 
 Maar de essentie van een web applicatie is, dat zij "leeft" op de kabel (Wifi is een virtuele kabel). En een kabel is stateless. In een kabel kan een signaal alleen van de client naar de server of van de server naar de client gaan. En hiermee is het Request/Response model een feit.
 
@@ -343,7 +344,7 @@ public VehicleSearchResponseDto articles(
 De `@GetMapping("/articles")` adresseert een deel van de de A van de ABC. Maar een "request object", als complex type, bestaat niet in een kabel. Daarom moeten de *parameters* van het request als querystring parameters worden gedefinieerd voordat deze over een kabel kunnen worden aangeleverd aan de server. Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te poetsen maar ergens blijft het altijd schuren als je de grens van een paradigma (= de grens van een medium) oversteekt. In dit geval gaat het van OO naar Web (lees: van geheugen naar kabel). In geval van database interactie is het van OO naar RDBMS (lees: van geheugen naar disk).
 
 > Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
-> <cite>-- Peereflits --</cite>
+> *Peereflits*
 
 > **Note**
 > In zowel Java/spring als in .NET core wordt tegenwoordig alleen nog als binding JSON over HTTP gebruikt. Protocols als SOAP over HTTP, SOAP over TCP en SOAP over MQ zijn in onbruik geraakt. Als *contract* is [OpenAPI](https://www.openapis.org/) in zwang geraakt.

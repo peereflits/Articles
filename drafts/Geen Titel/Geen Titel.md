@@ -141,8 +141,7 @@ Om een probleem op te lossen! De aanvoerder van de oplossing heet niet voor niet
 
 Object oriëntatie is een antwoord op het probleem van toenemende complexiteit.
 
-> Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.
-> -- *Peereflits* --
+> Goede object oriëntatie is het efficient toepassen van een effectieve verdeel- en heerstactiek op complexiteit.<br/>-- *Peereflits* --
 
 Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis van computers en hun programmeertalen eens bekijken.
 
@@ -171,7 +170,7 @@ Functie modules uit die vroege tijd waren (soms) enorme libraries met niets ande
 
 Nu weten we allemaal dat als het aantal parameters van een functie toeneemt, de [cyclomatische complexiteit](https://en.wikipedia.org/wiki/Cyclomatic_complexity) navenant toeneemt == toenemende complexiteit. En we weten ook: **Complexity kills!**
 
-![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br /><cite>-- Ray Ozzie*
+![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)<br />-- *Ray Ozzie* --
 
 Toen een aantal knappe koppen hierover nadachten, ontstond het idee: als we nu eens het gedrag en de bijbehorende data van een functionaliteit (= één functie) zouden kunnen encapsuleren in één construct, één ding, één object ... ? En voilà: hier heb je "object oriëntatie".
 
@@ -208,8 +207,7 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
 
-> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.
-> *Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/)*
+> Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br/>-- *Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/)* --
 
 Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt. 
 
@@ -227,16 +225,13 @@ Er wordt in alle drie de gevallen gebruik gemaakt van de inheritance operator "`
 
 Toen OO een grote vlucht begon te nemen, werd "inheritance" bejubeld als één van haar meest belangrijkste features. Maar dit jubelen werd vooral gedaan door IT-managers die "inheritance" vooral vertaalde in herbruikbaarheid. In de documentatie van Microsoft wordt dit nog steeds aangehaald:
 
-> Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.
-> 
-> *[bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)*
+> Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.<br/>-- *[bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)* --
 
 Ik maak een functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".
 
 De developer blij want eenvoudig (ahum). De manager blij want de developer is sneller klaar (met minder bugs). Bedrijf blij, want sneller = goedkoper.
 
-> Favor polymorphism over inheritance.
-> *OO Design principle*
+> Favor polymorphism over inheritance.<br/>-- *OO Design principle* --
 
 Maar er zit nog een ander verhaal achter deze "inheritance" / herbruikbaarheid. En deze begint bij de vraag: waar "leeft" een (in een OO-taal geschreven) programma? In welk medium?
 
@@ -249,8 +244,7 @@ In dat artikel legde de auteur uit dat in een objecten-hiërarchie van overerfde
 > **Note**
 > Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat zelf moet doen (lees: null-pointers). In o.a. C++ kan dit nog steeds. Het is duidelijk zien in de beschikbare methoden om zelf geheugenblokken te kunnen alloceren/de-alloceren en het kunnen werken mat pointers(*) en geheugenadressen (&). Java & .NET/C# zijn ook "expres" uitgevonden om o.a. dit probleem op te lossen.
 
->	OO is about managing state.
-> *General opinion*
+>	OO is about managing state.<br/>-- *General opinion* --
 
 Van OO wordt ook wel gezegd dat het gaat om het managen van state. Inheritance = herbruikbaarheid van functionaliteit + herbruikbaarheid van code + herbruikbaarheid van geheugen.
 
@@ -296,7 +290,7 @@ In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fi
 In de jaren '80, met de komst van de PC, werd dit probleem deels verholpen. Na de Mainframe, ontstonden nu client-server systemen. Met name bij "fat-clients" rees het probleem: hoe krijg ik een nieuwe versie van mijn client applicatie op de PC van de gebruiker? Spoiler alert: internet!
 
 > **Note**
-> de mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br />Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
+> De mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br />Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
 
 De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten. 
 
@@ -341,8 +335,7 @@ public VehicleSearchResponseDto articles(
 
 De `@GetMapping("/articles")` adresseert een deel van de de A van de ABC. Maar een "request object", als complex type, bestaat niet in een kabel. Daarom moeten de *parameters* van het request als querystring parameters worden gedefinieerd voordat deze over een kabel kunnen worden aangeleverd aan de server. Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te poetsen maar ergens blijft het altijd schuren als je de grens van een paradigma (= de grens van een medium) oversteekt. In dit geval gaat het van OO naar Web (lees: van geheugen naar kabel). In geval van database interactie is het van OO naar RDBMS (lees: van geheugen naar disk).
 
-> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
-> *Peereflits*
+> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).<br/>-- *Peereflits* --
 
 > **Note**
 > In zowel Java/spring als in .NET core wordt tegenwoordig alleen nog als binding JSON over HTTP gebruikt. Protocols als SOAP over HTTP, SOAP over TCP en SOAP over MQ zijn in onbruik geraakt. Als *contract* is [OpenAPI](https://www.openapis.org/) in zwang geraakt.

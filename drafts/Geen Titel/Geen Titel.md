@@ -231,6 +231,7 @@ Er wordt in alle drie de gevallen gebruik gemaakt van de inheritance operator "`
 Toen OO een grote vlucht begon te nemen, werd "inheritance" bejubeld als één van haar meest belangrijkste features. Maar dit jubelen werd vooral gedaan door IT-managers die "inheritance" vooral vertaalde in herbruikbaarheid. In de documentatie van Microsoft wordt dit nog steeds aangehaald:
 
 > Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.
+> 
 > *[bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)*
 
 Ik maak een functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".

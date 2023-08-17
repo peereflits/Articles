@@ -53,22 +53,20 @@ De thema's die ik wil bespreken zijn:
 
 Wie maakt er bij het maken van nieuwe applicaties gebruik van een database? En wie van jullie een *relationele* database?
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
-
-![Figuur 1](table.png)<br/>*Figuur 1* 
-
-![Figuur 2](erd.png)<br/>*Figuur 2* 
-
-Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde van een veld wordt gevonden op het snijpunt van een tuple en een domain. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.
-
-![A table is called a relation](table_is_relation.png)<br/>*Figuur 2* 
-
-Zie: [Why are Relational Databases “Relational”?](https://vertabelo.com/blog/why-are-relational-databases-relational/)
-
-Maar dit geheel terzijde :smile:
-</aside>
+> **Note**
+> Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
+> 
+> ![Figuur 1](table.png)<br/>*Figuur 1* 
+> 
+> ![Figuur 2](erd.png)<br/>*Figuur 2* 
+> 
+> Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde van een veld wordt gevonden op het snijpunt van een tuple en een domain. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.
+>
+> ![A table is called a relation](table_is_relation.png)<br/>*Figuur 2* 
+>
+> Zie: [Why are Relational Databases “Relational”?](https://vertabelo.com/blog/why-are-relational-databases-relational/)
+> 
+> Maar dit geheel terzijde :smile:
 
 Waarom gebruiken we relationele databases? 
 
@@ -80,34 +78,26 @@ Antwoord: dat is het oplossen van het probleem van gestructureerde gegevensopsla
 
 Voordat er relationele databases bestonden moesten programmeurs zelf systemen (=databases) met het lezen en schrijven van en naar bestanden (=tabellen) programmeren. Dat was (en is) een heidens karwei. En je kan je voorstellen dat daar vaak fouten in zaten. Naast de tijdrovendheid en foutgevoeligheid van dat karwei was er nog een probleem: schijfruimte in die tijd was heel-heel-heel erg duur.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Voor een overzicht van disk- & memory storage, zie:
-
-* https://en.wikipedia.org/wiki/History_of_hard_disk_drives
-* https://www.computerhistory.org/timeline/memory-storage/
-
-</aside>
+> **Note**
+> Voor een overzicht van disk- & memory storage, zie:
+> 
+> * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
+> * https://www.computerhistory.org/timeline/memory-storage/
 
 In 1970 schreef Dr. Codd ([Edgar F. Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)) het baanbrekende artikel "[A Relational Model of Data for Large Shared Data Banks](https://learnsql.com/blog/codd-article-databases/)" waarin hij voorstelde om databases op basis van relationele algebra te beschrijven. Dit wordt nu het relationele model genoemd. Dat model had een aantal hele grote voordelen ten opzichte van de toendertijd bekende "network database model" en "hierarchical database model". Network- en hierarchical databases waren erg duur en complex in ontwikkeling en onderhoud. Met het gebruik van het relationele model kon men vele malen eenvoudiger gegevens beheren dan het de oudere modellen. 
 
 Op basis van dit artikel is later [SQL ontstaan](https://learnsql.com/blog/history-of-sql/) en het principe van [database normalisatie](https://en.wikipedia.org/wiki/Database_normalization). Een groot voordeel van data(base)normalisatie is dat je dan de minste schijfruimte nodig hebt om gegevens op te slaan; als je tenminste de derde normaal vorm (3NF) gebruikt. En nogmaals: schijfruimte was in de jaren '70 & '80 heel erg duur.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. Maar betekent niet dat wij (= developers) niet meer hoeven na te denken over hoe we zaken in een database opslaan. De kosten van opslag behelzen meer dan alleen de kosten van disk/GB. Denk hierbij ook aan de grootte in geheugen, de grootte "on te wire" en de tijd die nodig is om gegevens (of een bestand) te verwerken!
-
-> `More disk size == more read/write time == more throughput == more bandwith == more memory usage == more energy == more money`
-
-</aside>
+> **Note**
+> Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. Maar betekent niet dat wij (= developers) niet meer hoeven na te denken over hoe we zaken in een database opslaan. De kosten van opslag behelzen meer dan alleen de kosten van disk/GB. Denk hierbij ook aan de grootte in geheugen, de grootte "on te wire" en de tijd die nodig is om gegevens (of een bestand) te verwerken!
+>
+> `More disk size == more read/write time == more throughput == more bandwidth == more memory usage == more energy == more money`
+>
 
 De essentie van databases is dat zij "leeft" op de harde schijf; hoewel sommige "disks" weinig meer met schijven de maken hebben, leeft de database, in essentie, op disk (de 'D' in SSD is nog steeds die van "disk"). Dit medium, disk, kent zijn eigen taal: `READ` & `WRITE`. 
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** Een "delete" van een bestand op disk bestaat niet. Bij een delete wordt het adres van de bestandsallocatie "uitgegumd" (overschreven met nullen) uit de bestandsallocatietabel (**F**ile **A**llocation **T**able) van het OS waardoor het "gat" in de allocatie weer overschreven kan worden door andere bestanden.
-
-</aside>
+> **Note**
+> Een "delete" van een bestand op disk bestaat niet. Bij een delete wordt het adres van de bestandsallocatie "uitgegumd" (overschreven met nullen) uit de bestandsallocatietabel (**F**ile **A**llocation **T**able) van het OS waardoor het "gat" in de allocatie weer overschreven kan worden door andere bestanden.
 
 De daarvan afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
 
@@ -116,14 +106,11 @@ De daarvan afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
 * **U**pdate (UPDATE) = Overwrite in file
 * **D**elete (DELETE) = Overwrite with 0000
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-**Terzijde:** CRUD is slechts één van de drie drie taal varianten binnen SQL:
-1. **DML**: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE)
-1. **DDL**: Data Definition Language (CREATE, ALTER, DROP)
-1. **DAL**: Data Authorization Language (GRANT, REVOKE, DENY)
-
-</aside>
+> **Note**
+> CRUD is slechts één van de drie drie taal varianten binnen SQL:
+> 1. **DML**: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE)
+> 1. **DDL**: Data Definition Language (CREATE, ALTER, DROP)
+> 1. **DAL**: Data Authorization Language (GRANT, REVOKE, DENY)
 
 Het medium "disk" kent zijn eigen taal (r/w) en databases, die "leven" binnen dit medium, hebben een paradigma dat aan dit medium schatplichtig is en daarvan afleiden of overerven. Het database paradigma/taal (SQL) gaat dus, in essentie, over het lezen en schrijven van bestanden naar disk. En het managen van de complexiteit hiervan is het oplossen van het probleem van gestructureerde gegevensopslag.
 
@@ -131,20 +118,15 @@ Dat er niet zoiets als "overerving" bestaat in databases, is omdat dit een conce
 
 De *reason d'être* van "disk" is om "durable" state (persistente sate) mogelijk te maken.
 
-<aside style="background-color:#666;padding:1em;margin-bottom:1em;">
-
-### NoSQL Databases
-
-Toen het probleem van "dure schijfruimte" steeds minder een probleem werd, als gevolg van de ontwikkelingen op dat gebied, en in samenhang met de toegenomen rekenkracht en interconnectiviteit tussen systemen, begon de hoeveelheid gegevens die in databases terecht kwam te groeien tot een hoeveelheid die een decennium ervoor nog niet voor mogelijk werd gehouden. En niet alleen de *hoeveelheid* data werd steeds meer een uitdaging. Ook ontstond steeds meer de behoefte om "ongestructureerde" data (zoals bijvoorbeeld PDF documenten) te kunnen "queriën".
-
-Als gevolg van deze behoefte begonnen een aantal grote tech bedrijven te experimenten met en te bouwen aan grote gedistribueerde databases. Dit betekende het einde van de hegemonie van de relationele database; lees: SQL. En zo ontstond de **N**ot-**O**nly-**SQL** beweging met zijn [verschillende soorten databases](https://www.geeksforgeeks.org/types-of-nosql-databases/ "Types of NoSQL Databases"), die elk weer op hun beurt een specifiek persistentie probleem proberen op te lossen.
-
-Voor meer info:
-* [Difference between SQL and NoSQL](https://www.geeksforgeeks.org/difference-between-sql-and-nosql/)
-* [The CAP Theorem in DBMS](https://www.geeksforgeeks.org/the-cap-theorem-in-dbms/)
-
-</aside>
-
+> **Note**
+> ### NoSQL Databases
+> Toen het probleem van "dure schijfruimte" steeds minder een probleem werd, als gevolg van de ontwikkelingen op dat gebied, en in samenhang met de toegenomen rekenkracht en interconnectiviteit tussen systemen, begon de hoeveelheid gegevens die in databases terecht kwam te groeien tot een hoeveelheid die een decennium ervoor nog niet voor mogelijk werd gehouden. En niet alleen de *hoeveelheid* data werd steeds meer een uitdaging. Ook ontstond steeds meer de behoefte om "ongestructureerde" data (zoals bijvoorbeeld PDF documenten) te kunnen "queriën".
+> 
+> Als gevolg van deze behoefte begonnen een aantal grote tech bedrijven te experimenten met en te bouwen aan grote gedistribueerde databases. Dit betekende het einde van de hegemonie van de relationele database; lees: SQL. En zo ontstond de **N**ot-**O**nly-**SQL** beweging met zijn [verschillende soorten databases](https://www.geeksforgeeks.org/types-of-nosql-databases/ "Types of NoSQL Databases"), die elk weer op hun beurt een specifiek persistentie probleem proberen op te lossen.
+>
+> Voor meer info:
+> * [Difference between SQL and NoSQL](https://www.geeksforgeeks.org/difference-between-sql-and-nosql/)
+> * [The CAP Theorem in DBMS](https://www.geeksforgeeks.org/the-cap-theorem-in-dbms/)
 
 ## Object oriëntatie
 

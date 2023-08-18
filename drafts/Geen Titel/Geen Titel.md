@@ -2,11 +2,11 @@
 
 ## Introductie
 
-Welkom bij dit artikel (deze sessie) die ik express nog geen titel heb gegeven. Mijn naam is Peereflits en werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. En in al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enige contemplatie hierover, in mijn brein zijn gaan nestelen en van daaruit een verhaal zijn gaan spinnen, dat ik jullie graag wil gaan vertellen. Dat verhaal gaat over software, een stukje geschiedenis ervan, programmeer paradigma's en wat de essentie en consequentie hiervan is. 
+Welkom bij dit artikel (deze sessie) die ik express nog geen titel heb gegeven. Mijn naam is Peereflits en werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. En in al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enige contemplatie hierover, in mijn brein zijn gaan nestelen en van daaruit een verhaal zijn gaan spinnen, dat ik jullie graag wil gaan vertellen. Dat verhaal gaat over software, een stukje geschiedenis ervan, programmeer paradigma's en wat de essentie en consequentie hiervan is.
 
-Ik ga jullie hier geen nieuwe technologieën of technieken leren. Ik hoop jullie alleen meer inzicht te verschaffen in het *waarom* achter de *wat* je doet. Dit artikel dus niet over specifieke computertalen. Enige bekend hiermee is echter wel gewenst. Derhalve is dit artikel bedoeld voor programmeurs  die Java, .NET, C++ en waarschijnlijk ook Python kennen.
+Ik ga jullie hier geen nieuwe technologieën of technieken leren. Ik hoop jullie alleen meer inzicht te verschaffen in het *waarom* achter de *wat* je doet. Dit artikel dus niet over specifieke computertalen. Enige bekend hiermee is echter wel gewenst. Derhalve is dit artikel bedoeld voor programmeurs die Java, .NET, C++ en waarschijnlijk ook Python kennen.
 
-Ik weet daarbij heel goed *WAT* ik jullie wil gaan vertellen, maar nog niet goed *HOE*. 
+Ik weet daarbij heel goed *WAT* ik jullie wil gaan vertellen, maar nog niet goed *HOE*.
 
 Dit lijkt wel op het verschil tussen [declaratief-](https://nl.wikipedia.org/wiki/Declaratieve_taal) en [imperatief](https://nl.wikipedia.org/wiki/Imperatief_programmeren) programmeren.
 
@@ -62,7 +62,7 @@ Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur
 
 ![Figuur 2](erd.png)<br/>*Figuur 2*
 
-Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde van een veld wordt gevonden op het snijpunt van een tuple en een domain. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.
+Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde in een tabel wordt gevonden op het snijpunt van een tuple en een attribute. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is *niet* de reden waarom een relationele database "relationeel" heet; het is omdat het gegevens in een tabel-formaat opslaat.
 
 ![A table is called a relation](table_is_relation.png)<br/>*Figuur 2*
 
@@ -73,11 +73,11 @@ Maar dit geheel terzijde :smile:
 > **Note**
 > Einde note "Wat is het "relationele" aan een relationele database?"
 
-Waarom gebruiken we relationele databases? 
+Waarom gebruiken we relationele databases?
 
-Omdat relationele databases al zo heel lang bestaan, zijn er, vanaf de jaren '70,  hele generaties programmeurs opgegroeid met de alomtegenwoordige beschikbaarheid van databases als MySQL, Ms Access, SQL Server, Oracle e.a.. Daarbij is ook het denken in tabellen gemeengoed geworden. Dus als "we" denken in termen van "opslaan" van POJO's / POCO's / records / models / entities, dan denken we vrijwel meteen aan "tabellen". En *dus* aan relationele databases. Zelfs met de relatief recente komst van NoSQL databases is dat niet anders (ik kom hier nog op terug).
+Omdat relationele databases al zo heel lang bestaan, zijn er, vanaf de jaren '70, hele generaties programmeurs opgegroeid met de alomtegenwoordige beschikbaarheid van databases als MySQL, Ms Access, SQL Server, Oracle e.a.. Daarbij is ook het denken in tabellen gemeengoed geworden. Dus als "we" denken in termen van "opslaan" van POJO's / POCO's / records / models / entities, dan denken we vrijwel meteen aan "tabellen". En *dus* aan relationele databases. Zelfs met de relatief recente komst van NoSQL databases is dat niet anders (ik kom hier nog op terug).
 
-Misschien moet ik de vraag anders stellen: *Wat* is het probleem dat relationele databases proberen op te lossen? 
+Misschien moet ik de vraag anders stellen: *Wat* is het probleem dat relationele databases proberen op te lossen?
 
 Antwoord: dat is het oplossen van het probleem van gestructureerde gegevensopslag. Wat is dat probleem?
 
@@ -88,7 +88,7 @@ Voordat er relationele databases bestonden moesten programmeurs zelf systemen (=
 > * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
 > * https://www.computerhistory.org/timeline/memory-storage/
 
-In 1970 schreef Dr. Codd ([Edgar F. Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)) het baanbrekende artikel "[A Relational Model of Data for Large Shared Data Banks](https://learnsql.com/blog/codd-article-databases/)" waarin hij voorstelde om databases op basis van relationele algebra te beschrijven. Dit wordt nu het relationele model genoemd. Dat model had een aantal hele grote voordelen ten opzichte van de toendertijd bekende "network database model" en "hierarchical database model". Network- en hierarchical databases waren erg duur en complex in ontwikkeling en onderhoud. Met het gebruik van het relationele model kon men vele malen eenvoudiger gegevens beheren dan het de oudere modellen. 
+In 1970 schreef Dr. Codd ([Edgar F. Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)) het baanbrekende artikel "[A Relational Model of Data for Large Shared Data Banks](https://learnsql.com/blog/codd-article-databases/)" waarin hij voorstelde om databases op basis van relationele algebra te beschrijven. Dit wordt nu het relationele model genoemd. Dat model had een aantal hele grote voordelen ten opzichte van de toendertijd bekende "network database model" en "hierarchical database model". Network- en hierarchical databases waren erg duur en complex in ontwikkeling en onderhoud. Met het gebruik van het relationele model kon men vele malen eenvoudiger gegevens beheren dan het de oudere modellen.
 
 Op basis van dit artikel is later [SQL ontstaan](https://learnsql.com/blog/history-of-sql/) en het principe van [database normalisatie](https://en.wikipedia.org/wiki/Database_normalization). Een groot voordeel van data(base)normalisatie is dat je dan de minste schijfruimte nodig hebt om gegevens op te slaan; als je tenminste de derde normaal vorm (3NF) gebruikt. En nogmaals: schijfruimte was in de jaren '70 & '80 heel erg duur.
 
@@ -97,7 +97,7 @@ Op basis van dit artikel is later [SQL ontstaan](https://learnsql.com/blog/histo
 >
 > `More disk size == more read/write time == more throughput == more bandwidth == more memory usage == more energy == more money`
 
-De essentie van databases is dat zij "leeft" op de harde schijf; hoewel sommige "disks" weinig meer met schijven de maken hebben, leeft de database, in essentie, op disk (de 'D' in SSD is nog steeds die van "disk"). Dit medium, disk, kent zijn eigen taal: `READ` & `WRITE`. 
+De essentie van databases is dat zij "leeft" op de harde schijf; hoewel sommige "disks" weinig meer met schijven de maken hebben, leeft de database, in essentie, op disk (de 'D' in SSD is nog steeds die van "disk"). Dit medium, disk, kent zijn eigen taal: `READ` & `WRITE`.
 
 > **Note**
 > Een "delete" van een bestand op disk bestaat niet. Bij een delete wordt het adres van de bestandsallocatie "uitgegumd" (overschreven met nullen) uit de bestandsallocatietabel (**F**ile **A**llocation **T**able) van het OS waardoor het "gat" in de allocatie weer overschreven kan worden door andere bestanden.
@@ -124,7 +124,7 @@ De *reason d'être* van "disk" is om "durable" state (persistente sate) mogelijk
 > **Note**
 > ### NoSQL Databases
 > Toen het probleem van "dure schijfruimte" steeds minder een probleem werd, als gevolg van de ontwikkelingen op dat gebied, en in samenhang met de toegenomen rekenkracht en interconnectiviteit tussen systemen, begon de hoeveelheid gegevens die in databases terecht kwam te groeien tot een hoeveelheid die een decennium ervoor nog niet voor mogelijk werd gehouden. En niet alleen de *hoeveelheid* data werd steeds meer een uitdaging. Ook ontstond steeds meer de behoefte om "ongestructureerde" data (zoals bijvoorbeeld PDF documenten) te kunnen "queriën".
-> 
+>
 > Als gevolg van deze behoefte begonnen een aantal grote tech bedrijven te experimenten met en te bouwen aan grote gedistribueerde databases. Dit betekende het einde van de hegemonie van de relationele database; lees: SQL. En zo ontstond de **N**ot-**O**nly-**SQL** beweging met zijn [verschillende soorten databases](https://www.geeksforgeeks.org/types-of-nosql-databases/ "Types of NoSQL Databases"), die elk weer op hun beurt een specifiek persistentie probleem proberen op te lossen.
 >
 > Voor meer info:
@@ -133,7 +133,7 @@ De *reason d'être* van "disk" is om "durable" state (persistente sate) mogelijk
 
 ## Object oriëntatie
 
-Wie van jullie maakt er bij het maken van nieuwe applicaties gebruik van een objectgeoriënteerde taal en/of framework? En vooral, *waarom* gebruiken jullie deze? 
+Wie van jullie maakt er bij het maken van nieuwe applicaties gebruik van een objectgeoriënteerde taal en/of framework? En vooral, *waarom* gebruiken jullie deze?
 
 Voor de hand liggende antwoorden zijn: dit is wat ik heb geleerd op school of in de praktijk; dit wordt gebruikt bij de klant/in het project; Maar waarom wordt dit gedoceerd op opleidingen? Het wordt gevraagd door de industrie. En waarom vraagt de industrie om objectgeoriënteerde talen?
 
@@ -190,9 +190,9 @@ De definities die veelal worden gegeven bij elk van deze begrippen worden vaak v
 
 #### Over Encapsulation
 
-Dit wordt veelal gedefinieerd als dat de interne representatie van een object (=state) niet zichtbaar is buiten het object. Gewoonlijk kunnen alleen de eigen methoden van het object (=state) de velden rechtstreeks inspecteren of manipuleren. Vaak wordt in één adem met encapsulatie "acces modifiers" (`public`, `internal`, `protected`, `private`) genoemd als de manier waarop dit wordt gerealiseerd. 
+Dit wordt veelal gedefinieerd als dat de interne representatie van een object (=state) niet zichtbaar is buiten het object. Gewoonlijk kunnen alleen de eigen methoden van het object (=state) de velden rechtstreeks inspecteren of manipuleren. Vaak wordt in één adem met encapsulatie "acces modifiers" (`public`, `internal`, `protected`, `private`) genoemd als de manier waarop dit wordt gerealiseerd.
 
-Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, over het inkapselen van gedrag en de daarmee corresponderende data in één construct. Het probleem bij structured programming was dat methoden/functies steeds meer parameters kregen waardoor de complexiteit toenam. Door de parameters van een functie als losse fields/properties op te nemen in een construct, kan de functie vereenvoudigen (en mogelijk meerdere functies worden). En dat "construct" kennen we in OO-talen als `class`. 
+Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, over het inkapselen van gedrag en de daarmee corresponderende data in één construct. Het probleem bij structured programming was dat methoden/functies steeds meer parameters kregen waardoor de complexiteit toenam. Door de parameters van een functie als losse fields/properties op te nemen in een construct, kan de functie vereenvoudigen (en mogelijk meerdere functies worden). En dat "construct" kennen we in OO-talen als `class`.
 
 > **Note**
 > Naar mate een applicatie meer een "Line of Business" applicatie is, worden classes meer data-georiënteerd (record-like). Wanneer een library meer framework-achtige trekken krijgt, krijgen `classes` een meer functie georiënteerd karakter waarin de uitgangspunten van OO beter tot hun recht komen.
@@ -204,11 +204,11 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 > Program against abstractions, not concretions.<br/>-- *OO Design principle* --
 
-Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen). 
+Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen).
 
 > Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br/>-- *Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/)* --
 
-Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt. 
+Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt.
 
 ``` csharp
 public interface ICanFly { ... }
@@ -234,7 +234,7 @@ De developer blij want eenvoudig (ahum). De manager blij want de developer is sn
 
 Maar er zit nog een ander verhaal achter deze "inheritance" / herbruikbaarheid. En deze begint bij de vraag: waar "leeft" een (in een OO-taal geschreven) programma? In welk medium?
 
-Programma's leven primair in het RAM-geheugen van een computer. Dat zal niemand verbazen. Computertalen en compilers moeten dus slim kunnen omgaan met geheugen en het beheren ervan. De werkelijk reden achter de contractgeoriënteerdheid van OO zit in het feit dat met "fixed contracts" geheugenblokken beter zijn te beheren. 
+Programma's leven primair in het RAM-geheugen van een computer. Dat zal niemand verbazen. Computertalen en compilers moeten dus slim kunnen omgaan met geheugen en het beheren ervan. De werkelijk reden achter de contractgeoriënteerdheid van OO zit in het feit dat met "fixed contracts" geheugenblokken beter zijn te beheren.
 
 En hier begint mijn redenatie wankel te worden. Ik heb jaren geleden een artikel gelezen dat de start betekende van dit verhaal. Dat artikel kan ik helaas niet meer terugvinden. Vooral één van de afbeeldingen erbij was voor mij een eye-opener. Het eerste kwartje viel!
 
@@ -284,16 +284,16 @@ Internet is niet meer uit ons leven weg te denken. Sterker nog: een ieder die di
 
 Maar wat is het aan internet dat het zo immens populair is geworden? Eén van de grootste problemen die internet oplost, is de lokaliteit van data.<br/>**NB:** Op technisch niveau lost het het probleem van PRC (remote procedure call) op.
 
-In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fiets, met in hun hand een broodtrommel met pons-kaarten, naar een rekencentrum om hun code de laten compileren en uit te voeren. Mainframes hadden terminals waar programmeurs naar toe moesten gaan om iets van een computer gedaan te krijgen. 
+In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fiets, met in hun hand een broodtrommel met pons-kaarten, naar een rekencentrum om hun code de laten compileren en uit te voeren. Mainframes hadden terminals waar programmeurs naar toe moesten gaan om iets van een computer gedaan te krijgen.
 
 In de jaren '80, met de komst van de PC, werd dit probleem deels verholpen. Na de Mainframe, ontstonden nu client-server systemen. Met name bij "fat-clients" rees het probleem: hoe krijg ik een nieuwe versie van mijn client applicatie op de PC van de gebruiker? Spoiler alert: internet!
 
 > **Note**
 > De mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br/>Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
 
-De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten. 
+De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten.
 
-Door de groeiende beschikbaarheid van computers, kabels, (gestandaardiseerde) protocollen en applicaties (browsers en servers) kon internet ontstaan. Internet betekende, en betekent, dat "alle" informatie voor "iedereen", overal beschikbaar is. Die publieke alomtegenwoordigheid van informatie werkt ook als een [democratiserende kracht](https://assets.cambridge.org/97811070/49130/excerpt/9781107049130_excerpt.pdf "The internet as a democratising force"). 
+Door de groeiende beschikbaarheid van computers, kabels, (gestandaardiseerde) protocollen en applicaties (browsers en servers) kon internet ontstaan. Internet betekende, en betekent, dat "alle" informatie voor "iedereen", overal beschikbaar is. Die publieke alomtegenwoordigheid van informatie werkt ook als een [democratiserende kracht](https://assets.cambridge.org/97811070/49130/excerpt/9781107049130_excerpt.pdf "The internet as a democratising force").
 
 Internet betekende ook dat het deployment probleem bij client-server applicaties kon worden opgelost. En met de toenemende volwassenheid en functionaliteit in protocollen (HTML5) en applicaties (=browsers) zijn client-server systemen op sterven na dood[\*].
 
@@ -302,7 +302,7 @@ Dus rest ons applicaties te ontwikkelen "op internet". Deze applicaties bestaan 
 [\*] De term/begrip "client-server" blijft rudimentair toch bestaan.
 
 > **Note**
-> De front-end stack bestaat uit drie verschillende technologieën die ieder een eigen verantwoordelijkheid hebben ten aanzien van de inhoud: 
+> De front-end stack bestaat uit drie verschillende technologieën die ieder een eigen verantwoordelijkheid hebben ten aanzien van de inhoud:
 > * HTML = Structure of content (declaratief)
 > * CSS = Layout of content (declaratief)
 > * JS/WASM = Behavior of content (imperatief)
@@ -313,7 +313,7 @@ De grammatica van Request/Response bestaat uit [ABC](https://en.wikipedia.org/wi
 
 * **A**ddress: dit is de URL van het endpoint. *Waar* vindt ik de resource;
 * **B**inding: specificeert de te gebruiken communicatie- & beveiliging protocols. *Hoe* bevraag ik de resource;
-* **C**ontract:  definieert de interface van de resource. *Wat* kan ik van de resource vragen;
+* **C**ontract: definieert de interface van de resource. *Wat* kan ik van de resource vragen;
 
 De kabel lost een lokaliteitsprobleem op. Daarvoor gebruikt het een taal (ABC) die dat kan adresseren. Daarom kent web-programming (aan haar randen) niet zoiets als polymorfisme, overerving e.a.. Zie het onderstaande code voorbeeld:
 
@@ -349,7 +349,7 @@ Zal de toekomst uit gaan wijzen dat FP-talen OO-talen gaan vervangen omdat zij b
 
 Over Cloud computing wordt veel geschreven: het is immers hip & happening. En hoewel ik hierover nog het nodige kan vertellen, ga ik vertellen wat andere reeds hebben geblogd, gepodcast of gestreamed.
 
-Dus maar meteen: Waarom Cloud computing? Om het probleem van ongebruikte hardware op te lossen. 
+Dus maar meteen: Waarom Cloud computing? Om het probleem van ongebruikte hardware op te lossen.
 
 Het opzetten van een goed serverpark is duur; en deze niet volledig benutten is nog duurder (een hogere TCO). Organisaties geven vaker de voorkeur aan [OpEx boven CapEx](https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%20Microsoft%20Azure%20Fundamentals/6.2.%20Capital%20Expenditure%20(CapEx)%20vs%20Operational%20Expenditure%20(OpEx).md). Zie daarom deze welbekende onderstaande afbeelding:
 
@@ -390,7 +390,7 @@ Waarom gebruiken we:
 
 ---
 
-Enjoy coding<br/>Stay curious<br/>Keep thinking
+<p style="text-align: center;">Enjoy coding<br/>Stay curious<br/>Keep thinking</p>
 
 ---
 

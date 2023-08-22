@@ -70,7 +70,7 @@ Wat is het verschil tussen hardware en software?
 ---
 
 De thema's die ik wil bespreken zijn:
-* Databases
+* Databases (relationeel & NoSQL)
 * Object oriëntatie
 * Functional programming
 * Web programming
@@ -310,9 +310,9 @@ Toen ik eens, jaren geleden, een sessie bij [gebruikersgroep dotNed](https://www
 
 ### Het probleem van OO
 
-In OO, zoals we hiervoor hebben kunnen zien, wordt gedrag en "state" geëncapsuleerd in een `class`. De interne state van een object mag natuurlijk niet worden geopenbaard aan de buitenwereld. De interne state mag alleen gewijzigd worden door de publieke methoden (mutators) van een object. En deze mutators dienen dan ook zeer nauwgezet de parameters te inspecteren en de interne state te valideren voordat de state wordt gewijzigd. Programmeren is mensenwerk (ondanks de recente komst van ChatGPT). En mensen maken fouten. De state van een object wordt vaker "gelekt" dan lief is, wat weer allerlei side-effects doet ontstaan, wat weer fouten oplevert, wat weer kosten/ergernis/complexiteit ... You get the drill.
+In OO, zoals we hiervoor hebben kunnen zien, wordt gedrag en "state" geëncapsuleerd in een `class`. De interne state van een object mag natuurlijk niet worden geopenbaard aan de buitenwereld. De interne state mag alleen gewijzigd worden door de publieke methoden (mutators) van een object. Deze mutators dienen dan ook zeer nauwgezet de parameters te inspecteren en de interne state te valideren voordat de state wordt gewijzigd. Programmeren is mensenwerk (ondanks de recente komst van ChatGPT). En mensen maken fouten. De state van een object wordt vaker "gelekt" dan lief is, wat weer allerlei side-effects doet ontstaan, wat weer fouten oplevert, wat weer kosten/ergernis/complexiteit ... You get the drill.
 
-Managing state is complex. En "OO is about managing state". Enter Functional programming
+Managing state is complex. En "OO is about managing state". Enter Functional programming.
 
 
 ### Het Functionele paradigma 101
@@ -331,7 +331,7 @@ https://fsharpforfunandprofit.com/) is een site die mij (destijds) veel inzicht 
 
 Internet is niet meer uit ons leven weg te denken. Sterker nog: een ieder die dit leest, dankt (direct of indirect) zijn brood eraan. Velen van ons werken aan web api's of het consumeren ervan.
 
-Maar wat is het aan internet dat het zo immens populair is geworden? Eén van de grootste problemen die internet oplost, is de lokaliteit van data.<br/>**NB:** Op technisch niveau lost het het probleem van PRC (remote procedure call) op.
+Maar wat is het aan internet dat het zo immens populair is geworden? Eén van de grootste problemen die het internet oplost, is de lokaliteit van data.<br/>**NB:** Op technisch niveau lost het het probleem van RPC (Remote Procedure Call) op.
 
 In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fiets, met in hun hand een broodtrommel met pons-kaarten, naar een rekencentrum om hun code de laten compileren en uit te voeren. Mainframes hadden terminals waar programmeurs naar toe moesten gaan om iets van een computer gedaan te krijgen.
 
@@ -396,7 +396,7 @@ Zal de toekomst uit gaan wijzen dat FP-talen OO-talen gaan vervangen omdat zij b
 
 ## Cloud computing
 
-Over Cloud computing wordt veel geschreven: het is immers hip & happening. En hoewel ik hierover nog het nodige kan vertellen, ga ik vertellen wat andere reeds hebben geblogd, gepodcast of gestreamed.
+Over Cloud computing wordt veel geschreven: het is immers hip & happening. En hoewel ik hierover nog het nodige kan vertellen, loop ik het risico dat ik ga vertellen wat andere reeds hebben geblogd, gepodcast of gestreamed.
 
 Dus maar meteen: Waarom Cloud computing? Om het probleem van ongebruikte hardware op te lossen.
 
@@ -408,18 +408,22 @@ Cloud computing "leeft" in een Data center/rekencentrum. Haar grammatica bestaat
 
 Cloud computing maakt door een ongekende beschikbaarheid van compute + storage mogelijk dat technologieën als AI (artificial intelligence - een betere term zou "artificial cleverness" zijn), Big Data en MPP (massive parallel processing) tot wasdom komen.
 
-Wordt de "next big wave" [Quantum computing](https://en.wikipedia.org/wiki/Quantum_computing)? Daar moet ik nog eens rustig over nadenken.
+Wordt de "next big wave" [Quantum computing](https://en.wikipedia.org/wiki/Quantum_computing)? Daar moet ik nog eens rustig over nadenken. Is het omdat quantum computing vragen kan beantwoorden die cloud computing/AI (nog) niet kan beantwoorden?
 
 
-## Afronding & Afsluiting
+## Conclusies & Afsluiting
 
 Samenvattend kom ik tot de volgende conclusies:
 
-Een paradigma probeert een probleem op te lossen van het medium waarop het "leeft" en gebruikt hierbij een taal die daarvan afhankelijk is. Het medium is een een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". En het heeft altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en kosten effectiever.
+Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". Het gebruikt hierbij een taal die van dat medium afhankelijk is. Het medium is een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". Het heeft vrijwel altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en effectiever. Lees: goedkoper.
 
-Applicaties gebruiken veelal meerdere paradigma's. En:
+Applicaties gebruiken veelal meerdere paradigma's: gegevens in de database, logica in het geheugen, publieke interface (API) "on the wire".
 
-> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch (like the object-relational mismatch).
+En:
+
+> Crossing the boundaries of a paradigm always aches due to a paradigm mismatch
+
+zoals object-relational mismatch en ook de object-request/response mismatch.
 
 * Disk = durable state
 * Memory = volatile state
@@ -435,15 +439,10 @@ Waarom gebruiken we:
 1. **Web**:       om efficiënter en kosteneffectiever locatie ongebonden gegevens te beheren zonder state (= kabel)
 1. **Cloud**:     om efficiënter en kosteneffectiever computers (serverparken) te beheren (datacenter)
 
-<br/><br/>
-
----
+<br/>Rest mij af te sluiten met:
 
 <p style="text-align: center;">Enjoy coding<br/>Stay curious<br/>Keep thinking</p>
 
----
-
-<br/><br/>
 
 ## Referenties
 

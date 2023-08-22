@@ -4,7 +4,7 @@
 
 Welkom bij dit artikel. Mijn naam is Peereflits. Ik werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. In al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enig nadenken, in mijn brein zijn gaan nestelen. Van daaruit is dit een verhaal gaan spinnen, dat ik jullie in dit artikel ga vertellen. Dit verhaal gaat over programmeerparadigma's, een stuk geschiedenis ervan, en de essentie en consequentie van deze paradigma's.
 
-<div style="background-color: #eeeeee;border-top: 4px solid orange;border-bottom: 4px solid orange;margin: 24px;padding:0 12px">
+---
 
 #### Over Paradigma's
 
@@ -14,7 +14,7 @@ Met "paradigma" bedoel ik de definitie van "[Programmeerparadigma](https://nl.wi
 
 Hierbij beschouw ik het ER-model (Entity-Relational model), OOP (Object-Oriented Programming), FP (Functional Programming), Web Programming (Request-Response bases models) als paradigma's.
 
-</div>
+---
 
 Ik ga jullie hier geen nieuwe technologieën of technieken leren. Ik hoop jullie alleen meer inzicht te verschaffen in het *waarom* achter *wat* je doet. Dit artikel dus niet over specifieke computertalen. Enige kennis hierover is echter wel gewenst. Derhalve is dit artikel bedoeld voor programmeurs die tenminste een object georiënteerde taal, als Java, C#, C++ of Python kennen.
 

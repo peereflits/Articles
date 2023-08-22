@@ -2,7 +2,7 @@
 
 ## Introductie
 
-Welkom bij dit artikel. Mijn naam is Peereflits. Ik werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. In al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enig nadenken, in mijn brein zijn gaan nestelen. Van daaruit is dit een verhaal gaan spinnen, dat ik jullie ga vertellen. Dit verhaal gaat over programmeer paradigma's, een stuk geschiedenis ervan, en de essentie en consequentie van de paradigma's.
+Welkom bij dit artikel. Mijn naam is Peereflits. Ik werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. In al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enig nadenken, in mijn brein zijn gaan nestelen. Van daaruit is dit een verhaal gaan spinnen, dat ik jullie in dit artikel ga vertellen. Dit verhaal gaat over programmeerparadigma's, een stuk geschiedenis ervan, en de essentie en consequentie van deze paradigma's.
 
 ---
 

@@ -22,7 +22,7 @@ Ik weet daarbij heel goed *wat* ik jullie wil gaan vertellen, maar nog niet heel
 
 --- 
 
-#### Over *hoe* en *wat* (declaratief versus imperatief programmeren)
+#### Over *hoe* en *wat* (declaratief versus imperatief)
 
 De vraagwoorden *wat* en *hoe* zijn van fundamenteel belang binnen de wereld van software development.
 
@@ -40,7 +40,7 @@ De functiesignatuur (de *wat*) vertelt dat het twee getallen optelt en het resul
 
 Bij declaratieve talen, zoals SQL, hoeft te hoe-vraag niet meer gesteld te worden; dat lost de "runtime" voor je op. In het geval van SQL is dit het RDBMS. Derhalve hoef je je alleen te concentreren op de hoe-vraag. 
 
-Programmeerparadigma's proberen ook een "wat?"-probleem te beantwoorden. Hierbij heeft elke computertaal een eigen dialect waarin het probeert deze vraag te beantwoorden door op zijn manier te vertellen *hoe* dat moet. Ik kom niet op terug.
+Programmeerparadigma's proberen ook een "wat?"-probleem te beantwoorden. Hierbij heeft elke computertaal een eigen dialect waarin het probeert deze vraag te beantwoorden door op zijn manier te vertellen *hoe* dat moet. Ik kom hier op terug.
 
 > **Note**
 > Zien jullie in het bovenstaande voorbeeld, *alle* fouten in de code? Het zijn er drie! En deze drie zijn elk te verdelen in een aparte categorie. Ga uit van de aanroep `Add(2147483646, 2);`.
@@ -54,7 +54,6 @@ Programmeerparadigma's proberen ook een "wat?"-probleem te beantwoorden. Hierbij
 Maar goed, ik dwaal af. Ik wil het gaan hebben over een aantal paradigma's binnen de informatica, binnen software ontwikkeling.
 
 > Informatica gaat net zo min over computers als astronomie over telescopen.<br/>-- *[Edsger W. Dijkstra](https://quotefancy.com/edsger-w-dijkstra-quotes)* --
-
 
 ---
 
@@ -120,7 +119,7 @@ Voordat er relationele databases bestonden moesten programmeurs zelf systemen (=
 
 In 1970 schreef Dr. Codd ([Edgar F. Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)) het baanbrekende artikel "[A Relational Model of Data for Large Shared Data Banks](https://learnsql.com/blog/codd-article-databases/)" waarin hij voorstelde om databases op basis van relationele algebra te beschrijven. Dit wordt nu het relationele model genoemd. Dit model had een aantal hele grote voordelen ten opzichte van de toendertijd bekende "network database model" en "hierarchical database model". Network- en hierarchical databases waren erg duur en complex in ontwikkeling en onderhoud. Met het gebruik van het relationele model kon men vele malen eenvoudiger gegevens beheren ten opzichte van de oudere opslagmodellen.
 
-Op basis van dit artikel is later [SQL ontstaan](https://learnsql.com/blog/history-of-sql/) en het principe van [database normalisatie](https://en.wikipedia.org/wiki/Database_normalization). Data normalisatie is een methode om redundantie uit verzamelingen weg te modelleren. Een groot voordeel is dat deze vorm van gegevens opslaan veel minder ruimte in beslag neemt (als je tenminste de derde normaal vorm (3NF) gebruikt). En dit gold en geldt zeker voor de andere vormen van data opslag in die tijd. Nogmaals: schijfruimte was in de jaren '70 & '80 heel erg duur.
+Op basis van dit artikel is later [SQL](https://learnsql.com/blog/history-of-sql/) ontstaan en het principe van [database normalisatie](https://en.wikipedia.org/wiki/Database_normalization). Data normalisatie is een methode om redundantie uit verzamelingen weg te modelleren. Een groot voordeel is dat gegevens in deze vorm opslaan veel minder ruimte in beslag neemt (als je tenminste de derde normaal vorm (3NF) gebruikt). En dit gold (en geldt) zeker voor de andere vormen van data opslag in die tijd. Nogmaals: schijfruimte was in de jaren '70 & '80 heel erg duur.
 
 ---
 
@@ -186,13 +185,14 @@ Wie van jullie maakt er bij het maken van nieuwe applicaties gebruik van een obj
 
 Voor de hand liggende antwoorden zijn: dit is wat ik heb geleerd op school of in de praktijk; dit wordt gebruikt bij de klant/in het project; Maar waarom wordt dit gedoceerd op opleidingen? Het wordt gevraagd door de industrie. En waarom vraagt de industrie om objectgeoriënteerde talen?
 
-Om een probleem op te lossen! De aanvoerder van de oplossing heet niet voor niet "Solution Architect". Welk probleem? Wat voor probleem?
+Om een probleem op te lossen! De aanvoerder van een oplossing heet niet voor niets "Solution Architect". Welk probleem? Wat voor probleem?
 
 Object oriëntatie is een antwoord op het probleem van toenemende complexiteit.
 
 > Goede object oriëntatie is het efficiënt toepassen van een effectieve "verdeel en heers" tactiek op complexiteit.<br/>-- *Peereflits* --
 
 Om te begrijpen wat die complexiteit behelst, moeten we eerst de geschiedenis van computers en hun programmeertalen eens bekijken.
+
 
 ### De geschiedenis van toenemende complexiteit
 
@@ -203,7 +203,7 @@ Toen de eerste computers werden ontwikkeld, bestond het beroep "software ontwikk
 > **Note**
 > De basis van elke programmeertaal bestaat uit drie "[programming constructs](https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1)": [sequentie, selectie & iteratie](https://www.101computing.net/sequencing-selection-iteration/).
 
-Om de problemen van "spaghetti code" het hoofd te kunnen bieden werden er aan computer talen [block structures](https://en.wikipedia.org/wiki/Block_(programming))" en [subroutines (functions)](https://en.wikipedia.org/wiki/Function_(computer_programming)) toegevoegd. En zo ontstond "[structured programming](https://en.wikipedia.org/wiki/Structured_programming)". Een belangrijk kenmerk van "Structured programming" is dat routines gescoped worden door "functions" en/of subroutines.
+Om de problemen van "spaghetti code" het hoofd te kunnen bieden werden er aan computer talen [block structures](https://en.wikipedia.org/wiki/Block_(programming)) en [subroutines (functions)](https://en.wikipedia.org/wiki/Function_(computer_programming)) toegevoegd. En zo ontstond "[structured programming](https://en.wikipedia.org/wiki/Structured_programming)". Een belangrijk kenmerk van "Structured programming" is dat routines gescoped worden door "functions" en/of subroutines.
 
 > **Note**
 > De Nederlands professor [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) valt de eer ten deel de term "structured programming" te hebben uitgevonden.
@@ -253,11 +253,11 @@ Maar dat is slechts een deel van het verhaal. Encapsulatie gaat, mijns inziens, 
 
 > Program against abstractions, not concretions.<br/>-- *OO Design principle* --
 
-Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel kan vliegen).
+Over "Abstractie" wordt vaak iets geroepen als dat het iets is dat gemodelleerd is naar iets uit te "echte" werkelijkheid. Soms wordt ook nog het concept "interface" genoemd. "Inheritance" definieert een "is-een" of "heeft-een" relatie tussen objecten (een vis "is-een" dier). En "Polymorphism" is een "het-kan" relatie tussen objecten (een vogel "kan" vliegen).
 
 > Voor elk probleem is in OO wel een juist abstractie niveau te vinden. Behalve voor het probleem van teveel abstracties.<br/>-- *Een uitspraak van [The Problem Solver](https://www.theproblemsolver.nl/)* --
 
-Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in Java en .NET/C# op dezelfde manier uitgedrukt.
+Maar daar gaat het helemaal niet om! Deze drie begrippen gaan maar over één ding: contract! Zowel abstractie (=interface) als overerving en polymorfisme worden in C# op één en dezelfde manier uitgedrukt:
 
 ``` csharp
 public interface ICanFly { ... }
@@ -275,7 +275,7 @@ Toen OO een grote vlucht begon te nemen, werd "inheritance" bejubeld als één v
 
 > Inheritance enables you to create new classes that reuse, extend, and modify the behavior defined in other classes.<br/>-- *[bron: microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)* --
 
-Ik maak een functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".
+Ik maak een nieuwe functionaliteit (= `class`). Jij wilt deze functionaliteit ook, maar dan net even iets anders. Dan overerf je mijn class en pas je het gedrag aan naar jouw smaak en hoef je niet zelf alles opnieuw te schrijven (inclusief de bugs) en breek je bestaande implementaties niet. Zie hier: herbruikbaarheid door "inheritance".
 
 De developer blij want eenvoudig (ahum). De manager blij want de developer is sneller klaar (met minder bugs). Bedrijf blij, want sneller = goedkoper.
 
@@ -303,7 +303,7 @@ Een kenmerk van (RAM-)geheugen is dat zij zeer vluchtig is. `RAM == volatile sta
 
 Met de komst van F# in .NET staat [Functional programming](https://nl.wikipedia.org/wiki/Functioneel_programmeren) weer iets meer in de belangstelling in de wereld van software ontwikkeling. De belangstelling is ook toegenomen doordat de ontwikkelingen in hardware functionele programmeertalen makkelijker maken.
 
-Maar waarom zijn er functionele talen (en het bijbehorende paradigma) nodig? De vraag die gesteld moet worden, is dus weer: welk probleem lost FP op?
+Maar *waarom* zijn er functionele talen (en het bijbehorende paradigma) nodig? De vraag die gesteld moet worden, is dus weer: welk probleem lost FP op?
 
 Toen ik eens, jaren geleden, een sessie bij [gebruikersgroep dotNed](https://www.dotned.nl/) bijwoonde, waarin [Oliver Sturm](https://www.linkedin.com/in/oliversturm/) het één en ander over FP uitlegde, viel het tweede kwartje.
 
@@ -321,10 +321,9 @@ Het paradigma van functioneel programmeren bestaat uit het elimineren van state 
 
 Dit is in een hele kleine notendop de essentie van FP. Ik weet dat ik aan een heleboel theorie ervan voorbij ga. Maar de crux van FP zit in het feit dat doordat een functie (op het allerlaagste niveau) stateless is, zijn er geen side-effects waardoor FP-programma's veel makkelijker haar berekeningen parallel uit kan voeren.
 
-In FP "leeft" een functie dus op de processor. En met de komst van multi-core processoren kan FP het probleem van inefficiënt processor gebruik (ongebruikte processor capaciteit) oplossen.
+In FP "leeft" een functie dus op een processor-thread. En met de komst van multi-core processoren kan FP het probleem van inefficiënt processor gebruik (ongebruikte processor capaciteit) oplossen.
 
-Wil je meer weten over FP/F#? [F# for Fun and Profit](
-https://fsharpforfunandprofit.com/) is een site die mij (destijds) veel inzicht hierin heeft gegeven.
+Wil je meer weten over FP/F#? [F# for Fun and Profit](https://fsharpforfunandprofit.com/) is een site die mij (destijds) veel inzicht hierin heeft gegeven.
 
 
 ## Web programming
@@ -340,7 +339,7 @@ In de jaren '80, met de komst van de PC, werd dit probleem deels verholpen. Na d
 > **Note**
 > De mission statement van Microsoft in '80 & `90 was: A computer on every desk and in every home.<br/>Zie: https://www.businessinsider.nl/microsoft-ceo-satya-nadella-bothered-by-bill-gates-mission-2017-2
 
-De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", de beschikbaar het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten.
+De opkomst van internet (in Nederland [in de jaren '90](https://nl.wikipedia.org/wiki/Geschiedenis_van_het_internet_in_Nederland "Geschiedenis van het internet in Nederland")) was, met "a computer on every desk and in every home", en de beschikbaarheid het van internet voor het grote publiek door ISP's en [Mosaic](https://nl.wikipedia.org/wiki/Mosaic_(browser)) niet meer te stuiten.
 
 Door de groeiende beschikbaarheid van computers, kabels, (gestandaardiseerde) protocollen en applicaties (browsers en servers) kon internet ontstaan. Internet betekende, en betekent, dat "alle" informatie voor "iedereen", overal beschikbaar is. Die publieke alomtegenwoordigheid van informatie werkt ook als een [democratiserende kracht](https://assets.cambridge.org/97811070/49130/excerpt/9781107049130_excerpt.pdf "The internet as a democratising force").
 

@@ -4,7 +4,8 @@
 
 This is a repository of articles for published by Peereflits.
 
-* [Programmeerparadigma's gaan niet over software](./Programmeerparadigmas-gaan-niet-over-software/readme.md)
+* [Programmeerparadigma's gaan niet over software](./Programmeerparadigmas-gaan-niet-over-software/readme-nl.md) (Dutch)
+* [Programming paradigms are not about software](./Programmeerparadigmas-gaan-niet-over-software/readme-en.md) (English)
 
 
 ---

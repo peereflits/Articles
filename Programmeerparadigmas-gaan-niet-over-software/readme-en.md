@@ -395,51 +395,63 @@ Will the future show us that FP-languages will replace OO-languages because they
 
 ## cloud computing
 
-A lot is written about Cloud computing: it is hip & happening. And although I can tell you about this, I run the risk of telling you what others have already blogged, podcast or streamed.
+A lot is written about Cloud computing: it is hip & happening. And although I can tell you a lot about this, chances are that I rephrase what others have already blogged, podcast or streamed.
 
 So right away: Why Cloud computing? To solve the problem of unused hardware.
 
-Setting up a good server park is expensive; and not making full use of it is even more expensive (a higher TCO).[OpEx above CapEx](https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%2520Microsoft%2520Azure%2520Fundamentals/6.2.%2520Capital%2520Expenditure%2520(CapEx)%2520vs%2520Operational%2520Expenditure%2520(OpEx).md).Therefore, see this well-known image below:
+Setting up a good server park is expensive; and not using it fully is even more expensive (a higher TCO). Organizations are more likely to prefer [OpEx above CapEx](https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%2520Microsoft%2520Azure%2520Fundamentals/6.2.%2520Capital%2520Expenditure%2520(CapEx)%2520vs%2520Operational%2520Expenditure%2520(OpEx).md).Therefore, see this well-known image below:
 
-![♪ SaaS vs PaaS vs IaaS: ♪ What's The Difference & How To Choose](./iaas-paas-saas.jpg)
+[![SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](./iaas-paas-saas.jpg)](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
 
-Cloud computing "lives" in a Data center/calculation center. Its grammar includes: public, private &amp; hybrid cloud, IAAS, PAS, SAAS, open standards, platform independence, MPP, AI, Big Data.
+Cloud computing "lives" in a Data center. Its grammar includes: public, private & hybrid cloud, IAAS, PAS, SAAS, open standards, platform independence, MPP, AI, Big Data and others.
 
-Cloud computing enables technologies such as AI (artificial intelligence - a better term would be artificial cleverness), Big Data and MPP (massive parallel processing) to grow.
+Due to the unprecedented availability of compute + storage, cloud computing enables technologies such as AI (artificial intelligence - a better term would be "artificial cleverness"), Big Data and MPP (massive parallel processing) to come to fruition.
 
-Becomes the next big wave[Quantum computing](https://en.wikipedia.org/wiki/Quantum_computing)? I need to think about that again. Is it because quantum computing can answer questions cloud computing/AI cannot (yet) answer?
+Will [Quantum computing](https://en.wikipedia.org/wiki/Quantum_computing) be the "next big wave"? I'll have to think about that some more. Is it because quantum computing can answer questions that cloud computing/AI can't (yet) answer?
 
 
 ## Conclusions & closure
 
 To sum up, I come to the following conclusions:
 
-Programming paradigms aren't just about software. Programming paradigms are more about hardware than we think. A programming paradigm is trying to solve a problem of the medium on which it "lives". It uses a language that depends on that medium. The medium is a part of the computer, such as memory, disk, processor, IO/(network-)cable (or even the entire computer itself in case of cloud computing). The problem to solve is often related to "state". It has almost always to do with money because the solution is (in the end) more efficient and effective. Read: cheaper.
+Programming paradigms aren't just about software. Programming paradigms are more about hardware than we think. A programming paradigm tries to solve a problem of the medium on which it "lives". It uses a language that depends on that medium. This medium is a part of the computer, such as memory, disk, processor, IO/(network-)cable (or even the entire computer itself in case of cloud computing). The problem to solve is often related to "state". It has almost always to do with money because the solution is (in the end) more efficient and effective. Read: cheaper.
 
-Applications often use multiple paradigms: data in a database data, logic in memory, public interface (API) on the wire.
+> ~~OO is about managing state.~~
+> OO is about managing *volatile* state.
+
+1. **Databases**:   are about managing structured 'state' (is schema bound data) on a durable medium<br/>
+                    because an RDBMS database "lives" on disk (state on durable media);
+1. **NoSQL**:       is about managing massive amounts of unstructured 'state' (schemaless data) on distributed durable media<br/>
+                    because a NoSQL database "lives" on mass storage (is: data lake == mass distributed persistent storage);
+1. **OO**:          is about managing state and behavior (=complexity) in on volatile media<br/>
+                    because a program "lives" in memory (RAM);
+1. **FP**:          deals with managing state as behavior (=complexity) on a stateless medium<br/>
+                    because computations "live" on/in processor threads;
+1. **Web**:         deals with managing non-location bound state and behavior on a stateless medium with "sticky state" availability<br/>
+                    because web applications "live" on the cable;
+1. **Cloud**:       is about managing multiple location-independent systems (data, behavior and complexity)<br/>
+                    because they "live" in a datacenter;
+                    
+In its most condense form:
+
+* Disk == durable structured state => RDBMS databases
+* Distributed disk == durable schemaless state => NoSQL databases
+* Memory == volatile state => OO
+* Processor (-threads) == no state => FP
+* Wire == stateless (backend) / sticky state (frontend) => WP
+* Cloud == massive state => CC
+
+Applications often use multiple paradigms: data in a database, logic in memory, public interface (API) on the wire.
 
 And:
 
 > Crossing the boundaries of a paradigm always aches due to a paradigm mismatch
 
-such as object-related mismatch and also the object-request/response mismatch.
+such as hte [object–relational impedance mismatch](https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch). Be aware there is also a object-request/response mismatch.
 
-* Disk = durable state
-* Memory = volatile state
-* Processor = no state
-* Wire = no state (backend) / sticky state (frontend)
-* Cloud = massive state
+I hope this article has provided you with the insight promised: understanding the *why* behind *what* you do.
 
-Why do we use:
-
-1. **Databases**: to manage more efficient and cost-effective schema-based (structured) data at durable state (= disk)
-1. **NoSQL**:     to manage more efficient and cost-effective non-schema-based (unstructured) data at (distributed) durable state
-1. **OO**:        to manage more efficient and cost-effective data/complexity in volatile state (= memory)
-1. **FP**:        to manage more efficient and cost-effective data/functionality without state (= processor)
-1. **Web**:       to manage more efficient and cost-effective location unbound data without state (= cable)
-1. **Cloud**:     to manage more efficient and cost-effective computers (server parks) (datacenter)
-
-<br/>I'll end with:
+Let me close with:
 
 <p style="text-align: center;">Enjoy coding<br/>Stay curious<br/>Keep thinking</p>
 
@@ -490,3 +502,4 @@ In order of appearance in the text:
 * https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%20Microsoft%20Azure%20Fundamentals/6.2.%20Capital%20Expenditure%20(CapEx)%20vs%20Operational%20Expenditure%20(OpEx).md
 * https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/
 * https://en.wikipedia.org/wiki/Quantum_computing
+* https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch

@@ -326,7 +326,7 @@ In FP "leeft" een functie dus op een processor-thread. En met de komst van multi
 Wil je meer weten over FP/F#? [F# for Fun and Profit](https://fsharpforfunandprofit.com/) is een site die mij (destijds) veel inzicht hierin heeft gegeven.
 
 
-## Web programming
+## Web programming (WP)
 
 Internet is niet meer uit ons leven weg te denken. Sterker nog: een ieder die dit leest, dankt (direct of indirect) zijn brood eraan. Velen van ons werken aan web api's of het consumeren ervan.
 
@@ -393,7 +393,7 @@ Hoewel een kabel stateless is van nature, kennen web applicaties een hybride for
 Zal de toekomst uit gaan wijzen dat FP-talen OO-talen gaan vervangen omdat zij beter aansluiten op het Web-programming paradigma daar FP en internet/HTTP beide stateless van nature zijn?
 
 
-## Cloud computing
+## Cloud computing (CC)
 
 Over Cloud computing wordt veel geschreven: het is immers hip & happening. En hoewel ik hierover nog het nodige kan vertellen, loop ik het risico dat ik ga vertellen wat andere reeds hebben geblogd, gepodcast of gestreamed.
 
@@ -416,29 +416,40 @@ Samenvattend kom ik tot de volgende conclusies:
 
 Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". Het gebruikt hierbij een taal die van dat medium afhankelijk is. Het medium is een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". Het heeft vrijwel altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en effectiever. Lees: goedkoper.
 
-Applicaties gebruiken veelal meerdere paradigma's: gegevens in de database, logica in het geheugen, publieke interface (API) "on the wire".
+> ~~OO is about managing state.~~
+> OO is about managing *volatile* state.
 
-En:
+1. **Databases**:  gaan over het beheren van gestructureerde 'state' (is schema gebonden data) op een duurzaam medium<br/>
+                   omdat een RDBMS database "leeft" op disk (state on durable media);
+1. **NoSQL**:      gaat over het beheren van massale hoeveelheden ongestructureerde 'state' (niet schema gebonden data) op gedistribueerde duurzame media<br/>
+                   omdat een NoSQL database "leeft" op gedistribueerde massa opslag (is: data lake == mass persistent storage);
+1. **OO**:         gaat over het beheren van 'state' en gedrag (=complexiteit) in een vluchtig medium (volatile media)<br/>
+                   omdat een programma "leeft" in het geheugen (RAM);
+1. **FP**:         gaat over het beheren van 'state' als gedrag (=complexiteit) op een medium zonder state<br/>
+                   omdat berekeningen "leven" in processor-threads;
+1. **Web**:        gaat over het beheren van niet-locatie gebonden 'state' en gedrag op een "stateless" medium met "sticky state"<br/>
+                   omdat web-applicaties "leven" op de kabel;
+1. **Cloud**:      gaat over het beheren van meerdere locatie-ongebonden systemen (data, gedrag en complexiteit)<br/>
+                   omdat deze "leven" in een datacenter;
+
+In zijn meest gecondenseerde vorm:
+
+* Disk == durable structured state => RDBMS databases
+* Distributed disk == durable schemaless state => NoSQL databases
+* Memory == volatile state => OO
+* Processor (-threads) == no state => FP
+* Wire == stateless (backend) / sticky state (frontend) => WP
+* Cloud == massive state => CC
+
+Applicaties gebruiken veelal meerdere paradigma's: gegevens in de database, logica in het geheugen, publieke interface (API) "on the wire". En:
 
 > Crossing the boundaries of a paradigm always aches due to a paradigm mismatch
 
-zoals object-relational mismatch en ook de object-request/response mismatch.
+zoals de [Object–relational impedance mismatch](https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch). Wees je ervan bewust dat er ook een object-request/response mismatch is!
 
-* Disk = durable state
-* Memory = volatile state
-* Processor = no state
-* Wire = no state (backend) / sticky state (frontend)
-* Cloud = massive state
+Ik hoop dat dit artikel jullie het beloofde inzicht heeft verschaft: inzicht in het *waarom* achter *wat* je doet. 
 
-Waarom gebruiken we:
-1. **Databases**: om efficiënter en kosteneffectiever schemagebonden (gestructureerde) gegevens op durable state (= disk) te beheren
-1. **NoSQL**:     om efficiënter en kosteneffectiever niet-schemagebonden (ongestructureerde) gegevens op (gedistribueerde) durable state te beheren
-1. **OO**:        om efficiënter en kosteneffectiever gegevens/complexiteit in volatile state (= geheugen) te beheren
-1. **FP**:        om efficiënter en kosteneffectiever data/functionaliteit te beheren zonder state (= processor)
-1. **Web**:       om efficiënter en kosteneffectiever locatie ongebonden gegevens te beheren zonder state (= kabel)
-1. **Cloud**:     om efficiënter en kosteneffectiever computers (serverparken) te beheren (datacenter)
-
-<br/>Rest mij af te sluiten met:
+Rest mij af te sluiten met:
 
 <p style="text-align: center;">Enjoy coding<br/>Stay curious<br/>Keep thinking</p>
 
@@ -489,3 +500,4 @@ In volgorde van verschijning in de tekst:
 * https://github.com/undergroundwires/Azure-in-bullet-points/blob/master/AZ-900%20Microsoft%20Azure%20Fundamentals/6.2.%20Capital%20Expenditure%20(CapEx)%20vs%20Operational%20Expenditure%20(OpEx).md
 * https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/
 * https://en.wikipedia.org/wiki/Quantum_computing
+* https://en.wikipedia.org/wiki/Object-relational_impedance_mismatch

@@ -1,5 +1,8 @@
 # Programming paradigms are not about software
 
+TL;DR; Programming paradigms aren't just about software. Programming paradigms are more about hardware than we think. A programming paradigm tries to solve a problem of the medium on which it "lives". It uses a language that depends on that medium. This medium is a part of the computer, such as memory, disk, processor, IO/(network-)cable (or even the entire computer itself in case of cloud computing). The problem to solve is often related to "state". It has almost always to do with money because the solution is (in the end) more efficient and effective. Read: cheaper.
+
+
 ## Introduction
 
 Welcome to this article. My name is Peereflits. I've been working as a software developer in IT for some 30 years now. In all those years I have seen a number of developments take place that, after some reflection, have settled in my brain. From there, this spun into a story, which I am going to tell you in this article. This story is about programming paradigms, a piece of its history, and the essence and consequence of these paradigms.
@@ -69,14 +72,14 @@ What is the difference between hardware and software?
 ---
 
 The themes I want to discuss are:
-* Databases (Relational & NoSQL)
-* Object orientation
-* Functional programming
-* Web programming
-* Cloud computing
+* [Databases](#databases) (Relational & [NoSQL](#nosql-databases))
+* [Object orientation](#object-orientation) (OO)
+* [Functional programming](#functional-programming-fp) (FP)
+* [Web programming](#web-programming-wp) (WP)
+* [Cloud computing](#cloud-computing-cc) (CC)
 
 
-## databases
+## Databases
 
 Who makes use of a database when creating new applications? And which one of you uses a *relational* database?
 
@@ -315,7 +318,7 @@ In OO, as we have seen before, behavior and state are encapsulated in a class. T
 Managing state is complex, and "OO is about managing state." Enter Functional programming.
 
 
-### functional paradigm 101
+### The Functional paradigm 101
 
 The paradigm of functional programming is to eliminate state by describing "everything" in the form of functions. But are we back to structured programming?, I can already hear you thinking. But no. This paradigm is based on the mathematical theory of the [Lambdacalculus](https://nl.wikipedia.org/wiki/Lambdacalculus). It is a higher level of thinking, understanding and calculation where functions have no side-effects because these functions have no state (also called "pure functions" in FP). And the parameters of a function can also be described as a function (also called [currying](https://en.wikipedia.org/wiki/Currying)). In other words, a function can take another function as an argument. Functions in FP are often referentially transparent. This means that an expression can be replaced by its value without changing the behavior of the program.
 
@@ -326,7 +329,7 @@ In FP, therefore, a function lives on a processor-thread. And with the advent of
 Do you want to know more about FP/F#? [F# for Fun and Profit](https://fsharpforfunandprofit.com/) )is a site that gave me (at the time) a lot of insight into this.
 
 
-## Web programming
+## Web programming (WP)
 
 The Internet has become an indispensable part of our lives. In fact, everyone who reads this owes (directly or indirectly) his bread to it. Many of us work on or consume web APIs.
 
@@ -393,7 +396,7 @@ Although a cable is stateless by nature, web applications have a hybrid form of 
 Will the future show us that FP-languages will replace OO-languages because they're a better fit to the Web-programming paradigm, as FP and internet/HTTP are both stateless by nature?
 
 
-## cloud computing
+## Cloud Computing (CC)
 
 A lot is written about Cloud computing: it is hip & happening. And although I can tell you a lot about this, chances are that I rephrase what others have already blogged, podcast or streamed.
 
@@ -416,8 +419,7 @@ To sum up, I come to the following conclusions:
 
 Programming paradigms aren't just about software. Programming paradigms are more about hardware than we think. A programming paradigm tries to solve a problem of the medium on which it "lives". It uses a language that depends on that medium. This medium is a part of the computer, such as memory, disk, processor, IO/(network-)cable (or even the entire computer itself in case of cloud computing). The problem to solve is often related to "state". It has almost always to do with money because the solution is (in the end) more efficient and effective. Read: cheaper.
 
-> ~~OO is about managing state.~~
-> OO is about managing *volatile* state.
+> ~~OO is about managing state.~~<br/>OO is about managing *volatile* state.
 
 1. **Databases**:   are about managing structured 'state' (is schema bound data) on a durable medium<br/>
                     because an RDBMS database "lives" on disk (state on durable media);
@@ -441,9 +443,7 @@ In its most condense form:
 * Wire == stateless (backend) / sticky state (frontend) => WP
 * Cloud == massive state => CC
 
-Applications often use multiple paradigms: data in a database, logic in memory, public interface (API) on the wire.
-
-And:
+Applications often use multiple paradigms: data in a database, logic in memory, public interface (API) on the wire. And:
 
 > Crossing the boundaries of a paradigm always aches due to a paradigm mismatch
 

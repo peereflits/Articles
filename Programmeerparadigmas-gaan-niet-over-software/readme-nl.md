@@ -1,5 +1,8 @@
 # Programmeerparadigma's gaan niet over software
 
+TL;DR; Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". Het gebruikt hierbij een taal die van dat medium afhankelijk is. Het medium is een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". Het heeft vrijwel altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en effectiever. Lees: goedkoper.
+
+
 ## Introductie
 
 Welkom bij dit artikel. Mijn naam is Peereflits. Ik werk inmiddels al zo'n 30 jaar als software ontwikkelaar in de IT. In al die jaren heb ik een aantal ontwikkelingen zien plaatsvinden die zich, na enig nadenken, in mijn brein zijn gaan nestelen. Van daaruit is dit een verhaal gaan spinnen, dat ik jullie in dit artikel ga vertellen. Dit verhaal gaat over programmeerparadigma's, een stuk geschiedenis ervan, en de essentie en consequentie van deze paradigma's.
@@ -69,11 +72,11 @@ Wat is het verschil tussen hardware en software?
 ---
 
 De thema's die ik wil bespreken zijn:
-* Databases (relationeel & NoSQL)
-* Object oriëntatie
-* Functional programming
-* Web programming
-* Cloud computing
+* [Databases](#databases) (relationeel & [NoSQL](#nosql-databases))
+* [Object oriëntatie](#object-oriëntatie) (OO)
+* [Functional programming](#functional-programming-fp) (FP)
+* [Web programming](#web-programming-wp) (WP)
+* [Cloud computing](#cloud-computing-cc) (CC)
 
 
 ## Databases
@@ -416,8 +419,7 @@ Samenvattend kom ik tot de volgende conclusies:
 
 Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". Het gebruikt hierbij een taal die van dat medium afhankelijk is. Het medium is een onderdeel van de computer zoals geheugen, disk, processor, IO/(netwerk-)kabel (of zelfs de hele computer zelf in geval van cloud computing). Het op te lossen probleem heeft vaak de maken met "state". Het heeft vrijwel altijd te maken met geld want de oplossing is (uiteindelijk) efficiënter en effectiever. Lees: goedkoper.
 
-> ~~OO is about managing state.~~
-> OO is about managing *volatile* state.
+> ~~OO is about managing state.~~<br/>OO is about managing *volatile* state.
 
 1. **Databases**:  gaan over het beheren van gestructureerde 'state' (is schema gebonden data) op een duurzaam medium<br/>
                    omdat een RDBMS database "leeft" op disk (state on durable media);

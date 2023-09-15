@@ -35,8 +35,53 @@ pre { background-color: #ccc; }
              en effectiever. Lees:&nbsp;goedkoper.
         </p>
 
-        <h1>Introductie</h1>
-        <p>Welkom bij dit artikel. Mijn naam is Peereflits. Ik werk inmiddels al zo'n 30 jaar als 
+        <h4>Inhoudsopgave</h4>
+        <ol>
+            <li><a href="#introductie" target="_self" title="Introductie">Introductie</a></li>
+            <li><a href="#databases" target="_self" title="Databases">Databases</a>
+                <ol>
+                    <li><a href="#het-waarom" target="_self" title="Het waarom">Het waarom</a></li>
+                    <li><a href="#nosql-databases" target="_self" title="NoSQL Databases">NoSQL Databases</a></li>
+                    <li><a href="#database-is-disk" target="_self" title="Database == disk">Database == disk</a></li>
+                </ol>
+            </li>
+            <li><a href="#object-oriëntatie" target="_self" title="Object oriëntatie">Object oriëntatie</a> (OO)
+                <ol>
+                    <li><a href="#geschiedenis-van-complexiteit" target="_self" title="De geschiedenis van toenemende complexiteit">De geschiedenis van toenemende complexiteit</a></li>
+                    <li><a href="#object-oriëntatie-101" target="_self" title="Object oriëntatie (OO) 101">Object oriëntatie (OO) 101</a>
+                        <ol>
+                            <li><a href="#over-encapsulation" target="_self" title="Over Encapsulation">Over Encapsulation</a></li>
+                            <li><a href="#over-abstraction" target="_self" title="Over Abstraction, Inheritance en Polymorphism">Over Abstraction, Inheritance en Polymorphism</a></li>
+                        </ol>
+                        <li><a href="#oo-is-ram" target="_self" title="OO == RAM">OO == RAM</a></li>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="#functional-programming" target="_self" title="Functional programming">Functional programming</a> (FP)
+                <ol>
+                    <li><a href="#probleem-van-oo" target="_self" title="Het probleem van OO">Het probleem van OO</a></li>
+                    <li><a href="#functionele-paradigma" target="_self" title="Het Functionele paradigma 101">Het Functionele paradigma 101</a></li>
+                    <li><a href="#fp-is-thread" target="_self" title="FP == Thread">FP == Thread</a></li>
+                </ol>
+            </li>
+            <li><a href="#web-programming" target="_self" title="Web programming">Internet / Web programming</a> (WP)
+                <ol>
+                    <li><a href="#lokaliteit-van-data" target="_self" title="Het probleem van lokaliteit van data">Het probleem van lokaliteit van data</a></li>
+                    <li><a href="#wp-is-kabel" target="_self" title="WP == kabel">WP == kabel</a></li>
+                </ol>
+            </li>
+            <li><a href="#cloud-computing" target="_self" title="Cloud computing">Cloud computing</a> (CC)
+                <ol>
+                    <li><a href="#ongebruikte-hardware" target="_self" title="Het probleem van ongebruikte hardware">Het probleem van ongebruikte hardware</a></li>
+                    <li><a href="#cc-is-datacenter" target="_self" title="CC == Data center">CC == Data center</a></li>
+                </ol>
+            </li>
+            <li><a href="#conclusies-afsluiting" target="_self" title="Conclusies & Afsluiting">Conclusies &amp; Afsluiting</a></li>
+            <li><a href="#referenties" target="_self" title="Referenties">Referenties</a> (CC)</li>
+        </ol>
+    
+        <h1 id="introductie" >Introductie</h1>
+        <p>Welkom bij dit artikel. Mijn naam is Marcel Peereboom. Ik werk inmiddels al zo'n 30 jaar als 
             programmeur in de IT. In al die jaren heb ik een aantal ontwikkelingen zien 
             plaatsvinden die zich, na enig nadenken, in mijn brein zijn gaan nestelen. Van daaruit is 
             dit een verhaal gaan spinnen, dat ik jullie in dit artikel ga vertellen. Dit verhaal gaat 
@@ -232,7 +277,7 @@ pre { background-color: #ccc; }
             <p>Maar dit geheel terzijde <i class="bi bi-emoji-smile"></i>.</p>
         </aside>
 
-        <h2>Het waarom</h2>
+        <h2 id="het-waarom">Het waarom</h2>
        
         <p>Omdat relationele databases al zo heel lang bestaan, zijn er, vanaf de jaren '70, hele generaties 
             programmeurs opgegroeid met de alomtegenwoordige beschikbaarheid van databases als MySQL, Ms Access, 
@@ -374,7 +419,7 @@ pre { background-color: #ccc; }
             Antwoord: dat is het oplossen van het probleem van <em>massale</em> ongestructureerde gegevensopslag.
         </p>
 
-        <h2>Database == disk</h2>
+        <h2 id="database-is-disk">Database == disk</h2>
 
         <p>De <em>reason d'être</em> van "disk" is om "durable" state (persistente state) mogelijk 
             te maken. Het medium "disk" kent zijn eigen taal (r/w). Databases "leven" binnen dit medium en 
@@ -426,7 +471,7 @@ pre { background-color: #ccc; }
             computers en hun programmeertalen eens bekijken.
         </p>
         
-        <h2>De geschiedenis van toenemende complexiteit</h2>
+        <h2 id="geschiedenis-van-complexiteit">De geschiedenis van toenemende complexiteit</h2>
 
         <blockquote>
             In the beginning when we had no computers, we had no problems.<br/>
@@ -512,7 +557,7 @@ pre { background-color: #ccc; }
             één ding, één object ... ? En voilà: hier heb je "object oriëntatie".
         </p>
 
-        <h2>Object oriëntatie (OO) 101</h2>
+        <h2 id="object-oriëntatie-101">Object oriëntatie (OO) 101</h2>
 
         <p><a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object oriëntatie</a>  is al 
             "uitgevonden" in de jaren '60. Maar het duurde tot eind jaren '80 voordat OO echt gemeengoed werd. 
@@ -538,7 +583,7 @@ pre { background-color: #ccc; }
             (in de tegenwoordige context).
         </p>
 
-        <h3>Over Encapsulation</h3>
+        <h3 id="over-encapsulation">Over Encapsulation</h3>
 
         <p>Dit wordt veelal gedefinieerd als dat de interne representatie van een object (=state) niet zichtbaar is buiten 
             het object. Gewoonlijk kunnen alleen de eigen methoden van het object (=state) de velden rechtstreeks inspecteren 
@@ -566,7 +611,7 @@ pre { background-color: #ccc; }
         </aside>
 
         
-        <h3>Over Abstraction, Inheritance en Polymorphism</h3>
+        <h3 id="over-abstraction">Over Abstraction, Inheritance en Polymorphism</h3>
 
         <blockquote>
             Program against abstractions, not concretions.<br/>
@@ -657,7 +702,7 @@ pre { background-color: #ccc; }
             <p>Wie kent de 640Kb limiet in MS-Dos nog?</p>
         </aside>
         
-        <h2>OO == RAM</h2>
+        <h2 id="oo-is-ram">OO == RAM</h2>
 
         <p>Het managen van het geheugen is iets wat gemakkelijk fout kan gaan wanneer je dat 
             <span class="asideRef" onclick="toggleDisplay('aside15');">zelf moet doen</span>
@@ -708,7 +753,8 @@ pre { background-color: #ccc; }
             is dus: <em>wat</em> is het probleem dat FP probeert op te lossen?
         </p>
                 
-        <p>Toen ik eens een sessie bij <a href="https://www.dotned.nl/">gebruikersgroep dotNed</a> bijwoonde (in september 2009), 
+        <p>Toen ik eens een sessie bij <a href="https://www.dotned.nl/">gebruikersgroep dotNed</a> bijwoonde 
+            <a href="https://dotned.nl/dotned-bijeenkomst?id=17">(in september 2009)</a>, 
             waarin <a href="https://www.linkedin.com/in/oliversturm/">Oliver Sturm</a> het één en ander over FP uitlegde, 
             viel het <span class="asideRef" onclick="toggleDisplay('aside16');">tweede kwartje</span>.
         </p>
@@ -725,7 +771,7 @@ pre { background-color: #ccc; }
             </p>
         </aside>
         
-        <h2>Het probleem van OO</h2>
+        <h2 id="probleem-van-oo">Het probleem van OO</h2>
         
         <p>In OO, zoals we hiervoor hebben kunnen zien, wordt gedrag en "state" in een <code>class</code> ingekapseld. 
             De interne state van een object mag natuurlijk niet worden geopenbaard aan de buitenwereld. De 
@@ -739,7 +785,7 @@ pre { background-color: #ccc; }
         
         <p>Managing state is complex. En "OO is about managing state". Enter: Functional programming.</p>
         
-        <h2>Het Functionele paradigma 101</h2>
+        <h2 id="functionele-paradigma">Het Functionele paradigma 101</h2>
 
         <p>Het paradigma van functioneel programmeren bestaat uit het elimineren van state door "alles" te beschrijven 
             in de vorm van functies. Maar zijn we dan weer terug bij structured programming?, hoor ik jullie al denken. 
@@ -752,7 +798,7 @@ pre { background-color: #ccc; }
             de werking van het programma te veranderen.
         </p>
                 
-        <h2>FP == Thread</h2>
+        <h2 id="fp-is-thread">FP == Thread</h2>
 
         <p>Dit is in een hele kleine notendop de essentie van FP. Ik weet dat ik aan een heleboel theorie ervan voorbij 
             ga. Maar de crux van FP zit in het feit dat doordat een functie (op het allerlaagste niveau) stateless is, 
@@ -790,7 +836,7 @@ pre { background-color: #ccc; }
             <p>Op technisch niveau lost internet het probleem van RPC (Remote Procedure Call) op.</p>
         </aside>
 
-        <h2>Het probleem van lokaliteit van data</h2>
+        <h2 id="lokaliteit-van-data">Het probleem van lokaliteit van data</h2>
 
         <p>In de begindagen van de grote computers ('50-'70) moesten programmeurs op hun fiets, met in hun hand een broodtrommel 
             met pons-kaarten, naar een rekencentrum om hun code de laten compileren en uit te voeren. Mainframes hadden terminals 
@@ -854,7 +900,7 @@ pre { background-color: #ccc; }
             </ul>
         </aside>
 
-        <h2>WP == kabel</h2>
+        <h2 id="wp-is-kabel">WP == kabel</h2>
 
         <p>De essentie van een web applicatie is, dat zij "leeft" op de kabel (Wifi is een virtuele kabel). 
             En een <span class="asideRef" onclick="toggleDisplay('aside21');" >kabel is stateless</span>. 
@@ -942,7 +988,7 @@ pre { background-color: #ccc; }
            Antwoord: om het probleem van ongebruikte hardware op te lossen.
         </p>
        
-        <h2>Het probleem van ongebruikte hardware</h2>
+        <h2 id="ongebruikte-hardware">Het probleem van ongebruikte hardware</h2>
 
         <p>Het opzetten van een goed serverpark is duur; heel erg duur. Denk niet alleen aan de servers, 
             maar ook aan de kabels, routers, switches, UPS'es en andere hardware. Tel daarbij op: dat dit alles ook nog in 
@@ -971,7 +1017,7 @@ pre { background-color: #ccc; }
                      title="SaaS vs PaaS vs IaaS: What's The Difference & How To Choose"></a>
         </p>
         
-        <h2>CC == Data center</h2>
+        <h2 id="cc-is-datacenter">CC == Data center</h2>
 
         <p>Cloud computing "leeft" in een Data center/rekencentrum. Haar grammatica bestaat o.a. uit: 
             public-, private- & hybrid cloud, IAAS, PAAS, SAAS, open standaarden, platform onafhankelijkheid, MPP, AI, Big Data.
@@ -1003,7 +1049,7 @@ pre { background-color: #ccc; }
         </p>
        
 
-        <h1 id="conclusies-afsluiting">Conclusies & Afsluiting</h1>
+        <h1 id="conclusies-afsluiting">Conclusies &amp; Afsluiting</h1>
 
         <p>Samenvattend kom ik tot de volgende conclusies:</p>
 
@@ -1084,11 +1130,11 @@ pre { background-color: #ccc; }
 
         <p>Ik hoop dat dit artikel jullie het inzicht heeft verschaft dat ik heb beloofd: 
             dat (programmeer-)paradigma's een sterkere relatie hebben met hardware dan 
-            dat je op het eerste gezicht zou denken.</p>
+            dat je op het eerste gezicht zou denken.
+        </p>
 
-        <p>&nbsp;</p>
-        <p>Rest mij af te sluiten met: bedankt voor het lezen en</p>
-        <p class="text-center">Enjoy coding<br/>Stay curious<br/>Keep thinking</p>
+        <p>Rest mij af te sluiten met: bedankt voor het lezen.</p>
+        <p>Enjoy coding<br/>Stay curious<br/>Keep thinking!</p>
 
 
         <h1 id="referenties">Referenties</h1>

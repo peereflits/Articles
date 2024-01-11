@@ -46,14 +46,16 @@ Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's ga
    * gaat over het beheren van meerdere locatie-ongebonden systemen (data, gedrag en complexiteit)
    * omdat deze "leven" in een datacenter;
 
-In zijn meest gecondenseerde vorm:
+In tabel-vorm:
 
-* Disk == durable structured state => RDBMS databases
-* Distributed disks == durable schemaless state => NoSQL databases
-* Memory == volatile state => OO
-* Processor (-threads) == no state => FP
-* Wire == stateless => WP
-* Cloud == massive state => CC
+| Paradigma | Medium | State | Taal |
+| --------- | ------ | ----- | ---- |
+| RDBMS databases        | Disk                 | durable, structured | Table, Key, CRUD, ACID |
+| NoSQL databases        | Distributed disks    | durable, massive, schemaless | Document, Key-value, Column, Graph, CAP |
+| Object Orientation     | Memory (RAM)         | volatile   | Encapsulation, Abstraction, Inheritance, Polymorphism |
+| Functional Programming | Processor (-threads) | unmutable | first-class-, higher-order- and pure functions, recursion, referential transparency, currying |
+| Web Programming        | Kabel                | stateless | Request/Response, ABC |
+| Cloud Computing        | Rekencentra          | unlimited | SLA, IAAS, PAAS, SAAS |
 
 Applicaties gebruiken veelal meerdere paradigma's: gegevens in de database, logica in het geheugen, publieke interface (API) "on the wire". 
 

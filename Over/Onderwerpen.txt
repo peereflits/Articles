@@ -1,0 +1,120 @@
+Gepubliceerd
+
+2023-week-49 Over Mastery.md | Mastery vs professionaliteit
+2023-week-50 Over Zeemeerminnen.md | Mermaid.js
+2023-week-51 Over Dynamics of software development.md | Dynamics of software development
+2024-week-02 Over wetenschappelijk bewijzen.md | Testen & Wetenschappelijk bewijzen
+2024-week-03 Over De meeste mensen deugen.md | De meeste mensen deugen
+2024-week-04 Over het verschil tussen software en hardware.md | Over het verschil tussen software en hardware
+2024-week-05 Over wat en hoe.md | Over *wat* en *hoe* (declaratief versus imperatief)
+2024-week-06 Over Intention Revealing Programming.md | Over Intention Revealing Programming
+2024-week-07 Over Coding Guidelines.md | Over Coding Guidelines
+
+====================================
+Onderwerpen:
+
+------------------------------------
+Over het "relationele" van een relationele databases
+
+Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
+
+Figuur 1
+Figuur 1.
+ Figuur 2
+Figuur 2.
+Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde in een tabel wordt gevonden op het snijpunt van een tuple en een attribute. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is niet de reden waarom een relationele database "relationeel" heet; het is omdat de gegevens in een tabel-formaat worden opgeslagen.
+
+Figuur 3: A table is called a relation
+Figuur 3: A table is called a relation.
+Zie: Why are Relational Databases “Relational”?
+
+Maar dit geheel terzijde .
+
+------------------------------------
+Sequentie, selectie, iteratie
+
+https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1
+https://www.101computing.net/sequencing-selection-iteration/
+
+
+------------------------------------
+Over goedkope opslag
+
+Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. 
+Maar dat betekent niet dat wij (= developers) niet meer hoeven na te denken over hoe we zaken in een database opslaan. 
+De kosten van opslag behelzen meer dan alleen de kosten van disk/GB. 
+Denk hierbij ook aan de grootte in geheugen, de grootte "on te wire" en de tijd die nodig is om gegevens (of een bestand) te verwerken!
+
+`Larger disk size => more read/write time => more throughput => more bandwidth => more memory usage => more energy => more money`
+
+Voor database-ontwerp geldt, wat mij betreft, dan ook het advies: niet alle tekst-velden hoeven een ANSI/UTF-16/NVARCHAR (double byte) characterset te hebben omdat dit vaak de standaard is. 
+Denk bijvoorbeeld eens aan het opslaan van IBAN-nummers, telefoonnummers, kentetekens of postcodes: deze passen in een ASCII characterset (= single byte).
+
+> **NB:** Voor een overzicht van de geschiedenis van disk- & memory storage, zie:
+> * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
+> * https://www.computerhistory.org/timeline/memory-storage/
+
+
+------------------------------------
+
+De van disk afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
+
+CRUD is slechts één van de drie drie taal varianten binnen SQL:
+
+DML: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE)
+DDL: Data Definition Language (CREATE, ALTER, DROP)
+DAL: Data Authorization Language (GRANT, REVOKE, DENY)
+DTL: Data Transaction Language (BEGIN TRANSACTION, COMMIT, ROLLBACK)
+
+Create (INSERT) = Write, append to file
+Read (SELECT) = Read from file
+Update (UPDATE) = Overwrite in file
+Delete (DELETE) = Overwrite with 0000
+
+------------------------------------
+Which Programming Languages Use the Least Electricity?
+https://thenewstack.io/which-programming-languages-use-the-least-electricity/
+
+
+------------------------------------
+Het belang van nieusgierigheid ...
+
+Why Most Engineers Aren't 10x Engineers
+https://www.developing.dev/p/why-most-engineers-arent-10x-engineers
+
+------------------------------------
+Talenknobbel of Wiskundeknobbel? Wat helpt de programmeur het meest?
+C:\Users\peere\OneDrive\Documents\Code\Library\Books\The_Programmer's_Brain.pdf
+
+------------------------------------
+GitHub Copilot
+
+Get better answers by setting the context for GitHub Copilot Chat in Visual Studio
+https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=vs-2022
+
+Understanding how GitHub Copilot works
+https://techcommunity.microsoft.com/t5/educator-developer-blog/understanding-how-github-copilot-works/ba-p/4021562
+
+GitHub Copilot Chat
+https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSGitHubCopilot
+https://devblogs.microsoft.com/visualstudio/copilot-chat-slash-commands-and-context-variables/
+
+GitHub Copilot
+https://marketplace.visualstudio.com/items?itemName=GitHub.copilotvs
+https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot
+
+
+------------------------------------
+“There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.” 
+-- Tony Hoare --
+https://en.wikiquote.org/wiki/C._A._R._Hoare
+If you can’t do the first variant, the second way starts looking awfully attractive perhaps.
+
+"The most important property of a program is whether it accomplishes the intentions of its user."
+-- Tony Hoare --
+https://en.wikiquote.org/wiki/C._A._R._Hoare
+
+
+------------------------------------
+De artikelen zijn te previewen via: https://markdownlivepreview.com/
+

@@ -6,7 +6,7 @@ Iedereen heeft vast wel eens één keer dit spelletje gedaan: je zit met een gro
 
 Het resultaat van dit spelletje is altijd dat het verhaal aan het eind een zeer verminkte versie is van die van het begin. Conclusie: mensen zijn zeer getalenteerd in het verminken van informatie. Het menselijk brein is niet gebouwd op nauwkeurigheid.
 
-Grote (en ook minder grote) IT-projecten hebben een slechte naam als het gaat om succesratio. Slechts een (zeer) klein percentage [(zo'n 0.5%)](https://www.runn.io/blog/it-project-management-statistics "Only 0.5% of IT projects are truly ‘successful’") van IT-projecten wordt binnen tijd, budget en opgeleverde features opgeleverd ([de cijfers verschillen van onderzoek tot onderzoek](https://teamstage.io/project-management-statistics/)). En ondanks toegenomen ervaring, tools, technologieën en methodieken blijft deze succesratio zo dramatisch laag (maar lijkt enigszins te verbeteren).
+Grote (en ook minder grote) IT-projecten hebben een slechte naam als het gaat om succesratio. Slechts een (zeer) klein percentage [(zo'n 0.5%)](https://www.runn.io/blog/it-project-management-statistics "Only 0.5% of IT projects are truly ‘successful’") van IT-projecten wordt binnen tijd, budget en gevraagde features opgeleverd ([de cijfers verschillen van onderzoek tot onderzoek](https://teamstage.io/project-management-statistics/)). En ondanks toegenomen ervaring, tools, technologieën en methodieken blijft deze succesratio zo dramatisch laag (maar lijkt enigszins te verbeteren).
 
 Hoe komt dat?
 

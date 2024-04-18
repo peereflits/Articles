@@ -31,13 +31,6 @@ Zie: Why are Relational Databases “Relational”?
 Maar dit geheel terzijde .
 
 ------------------------------------
-Sequentie, selectie, iteratie
-
-https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1
-https://www.101computing.net/sequencing-selection-iteration/
-
-
-------------------------------------
 Over goedkope opslag
 
 Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. 
@@ -77,7 +70,7 @@ https://thenewstack.io/which-programming-languages-use-the-least-electricity/
 
 
 ------------------------------------
-Het belang van nieusgierigheid ...
+Het belang van nieuwsgierigheid ...
 
 Why Most Engineers Aren't 10x Engineers
 https://www.developing.dev/p/why-most-engineers-arent-10x-engineers

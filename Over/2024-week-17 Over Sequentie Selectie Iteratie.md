@@ -13,24 +13,30 @@ Ongeacht welke (tweede or derde generatie) computer taal je gebruikt, in welk pa
 Bekijk eens de volgende voorbeelden (vooral ook voor de non-techies) en beantwoord de vraag: is dit een voorbeeld van sequentie, selectie of iteratie:
 
 ```
+WHILE (timer > 0):
+     PRINT "Carry on playing..."
+     timer = timer - 1
+```
+1) Dit is een &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; sequentie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; selectie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; iteratie
 
 ```
-Dit is: [ ] sequentie [ ] selectie  [ ] iteratie
+radius = 5
+PI = 3.14
+discArea = radius * radius * PI
+PRINT "Disc Area = " + discArea
+```
+2) Dit is een &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; sequentie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; selectie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; iteratie
 
 ```
-
+IF (score > 90) AND (score <= 100):
+     PRINT "You grade is A*"
 ```
-Dit is: [ ] sequentie [ ] selectie  [ ] iteratie
-
-```
-
-```
-Dit is: [ ] sequentie [ ] selectie  [ ] iteratie
+3) Dit is een &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; sequentie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; selectie &nbsp;&nbsp;&#x274f;&nbsp;&nbsp; iteratie
 
 
 Wil je zelf eens spelen met dit gedachtegoed, ga dan naar:
-* https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1
 * https://www.101computing.net/sequencing-selection-iteration/
+* https://www.bbc.co.uk/bitesize/guides/z433rwx/revision/1
 
 
 ---

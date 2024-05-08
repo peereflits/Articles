@@ -13,40 +13,8 @@ Gepubliceerd
 ====================================
 Onderwerpen:
 
-------------------------------------
-Over het "relationele" van een relationele databases
-
-Wat is het "relationele" aan een relationele database? Is dat Figuur 1 of Figuur 2?
-
-Figuur 1
-Figuur 1.
- Figuur 2
-Figuur 2.
-Het is "Figuur 1": in database parlando heet een tabel een relatie daar de waarde in een tabel wordt gevonden op het snijpunt van een tuple en een attribute. Het feit dat er tussen tabellen een "foreign key constraint" kan bestaan (figuur 2) is niet de reden waarom een relationele database "relationeel" heet; het is omdat de gegevens in een tabel-formaat worden opgeslagen.
-
-Figuur 3: A table is called a relation
-Figuur 3: A table is called a relation.
-Zie: Why are Relational Databases “Relational”?
-
-Maar dit geheel terzijde .
 
 ------------------------------------
-Over goedkope opslag
-
-Is opslag tegenwoordig goedkoop? Vergeleken met de prijzen van jaren geleden, lijkt het er inderdaad op dat de prijs per GB/TB enorm is gedaald. 
-Maar dat betekent niet dat wij (= developers) niet meer hoeven na te denken over hoe we zaken in een database opslaan. 
-De kosten van opslag behelzen meer dan alleen de kosten van disk/GB. 
-Denk hierbij ook aan de grootte in geheugen, de grootte "on te wire" en de tijd die nodig is om gegevens (of een bestand) te verwerken!
-
-`Larger disk size => more read/write time => more throughput => more bandwidth => more memory usage => more energy => more money`
-
-Voor database-ontwerp geldt, wat mij betreft, dan ook het advies: niet alle tekst-velden hoeven een ANSI/UTF-16/NVARCHAR (double byte) characterset te hebben omdat dit vaak de standaard is. 
-Denk bijvoorbeeld eens aan het opslaan van IBAN-nummers, telefoonnummers, kentetekens of postcodes: deze passen in een ASCII characterset (= single byte).
-
-> **NB:** Voor een overzicht van de geschiedenis van disk- & memory storage, zie:
-> * https://en.wikipedia.org/wiki/History_of_hard_disk_drives
-> * https://www.computerhistory.org/timeline/memory-storage/
-
 
 ------------------------------------
 

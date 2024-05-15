@@ -44,10 +44,6 @@ Why Most Engineers Aren't 10x Engineers
 https://www.developing.dev/p/why-most-engineers-arent-10x-engineers
 
 ------------------------------------
-Talenknobbel of Wiskundeknobbel? Wat helpt de programmeur het meest?
-C:\Users\peere\OneDrive\Documents\Code\Library\Books\The_Programmer's_Brain.pdf
-
-------------------------------------
 GitHub Copilot
 
 Get better answers by setting the context for GitHub Copilot Chat in Visual Studio

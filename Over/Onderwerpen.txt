@@ -78,5 +78,68 @@ https://en.wikiquote.org/wiki/C._A._R._Hoare
 
 
 ------------------------------------
-De artikelen zijn te previewen via: https://markdownlivepreview.com/
+Naming:
+
+
+Lees eens harop voor:
+
+``` csharp
+interface IQueryActiveCart{}
+class ActiveCartQuery : IQueryActiveCart {}
+
+interface ICommandCreateCart{}
+class CreateCartCommand : ICommandCreateCart {}
+
+// Usage:
+class Controller
+{
+    private readonly ICommandCreateCart _createCartCommand;
+	private readonly IQueryActiveCart _activeCartQuery;
+	
+    public Controller
+	(
+		IQueryActiveCart activeCartQuery,
+		ICommandCreateCart createCartCommand
+	)
+    {
+        _activeCartQuery = activeCartQuery;
+        _createCartCommand = createCartCommand;
+    }
+    ...
+}
+```
+
+versus:
+
+``` csharp
+interface IActiveCartQuery{}
+class ActiveCartQuery : IActiveCartQuery {}
+
+interface ICreateCartCommand{}
+class CreateCartCommand : ICreateCartCommand {}
+
+
+// Usage:
+class Controller
+{
+    private readonly ICreateCartCommand _createCartCommand;
+	private readonly IActiveCartQuery _activeCartQuery;
+	
+    public Controller
+	(
+		IActiveCartQuery activeCartQuery,
+		ICreateCartCommand createCartCommand
+	)
+    {
+        _activeCartQuery = activeCartQuery;
+        _createCartCommand = createCartCommand;
+    }
+    ...
+}
+```
+
+Bemerk eens hoe de interfaces (wat *beloof* ik) en de implementaties -classes- (wat *ben* ik) in het eerste voorbeeld genuanceerder expliciet zijn. Vooral bij gebruik (in controllers).
+En valt je bij het laatste voorbeeld de dodelijk eentonige repetitie op?
+ 
+
 

@@ -43,28 +43,6 @@ Het belang van nieuwsgierigheid ...
 Why Most Engineers Aren't 10x Engineers
 https://www.developing.dev/p/why-most-engineers-arent-10x-engineers
 
-------------------------------------
-GitHub Copilot
-
-Get better answers by setting the context for GitHub Copilot Chat in Visual Studio
-https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=vs-2022
-
-Understanding how GitHub Copilot works
-https://techcommunity.microsoft.com/t5/educator-developer-blog/understanding-how-github-copilot-works/ba-p/4021562
-
-GitHub Copilot Chat
-https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSGitHubCopilot
-https://devblogs.microsoft.com/visualstudio/copilot-chat-slash-commands-and-context-variables/
-
-GitHub Copilot
-https://marketplace.visualstudio.com/items?itemName=GitHub.copilotvs
-https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot
-
-https://github.blog/2024-02-22-how-ai-code-generation-works/
-
-Quick Tip: Use Threads to Improve Chat with GitHub Copilot in Visual Studio 2022
-https://visualstudiomagazine.com/Articles/2024/03/11/chat-threads.aspx
-
 
 ------------------------------------
 “There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.” 

@@ -118,6 +118,3 @@ class Controller
 
 Bemerk eens hoe de interfaces (wat *beloof* ik) en de implementaties -classes- (wat *ben* ik) in het eerste voorbeeld genuanceerder expliciet zijn. Vooral bij gebruik (in controllers).
 En valt je bij het laatste voorbeeld de dodelijk eentonige repetitie op?
- 
-
-

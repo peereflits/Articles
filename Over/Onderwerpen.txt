@@ -13,9 +13,6 @@ Gepubliceerd
 ====================================
 Onderwerpen:
 
-
-------------------------------------
-
 ------------------------------------
 
 De van disk afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
@@ -45,21 +42,10 @@ https://www.developing.dev/p/why-most-engineers-arent-10x-engineers
 
 
 ------------------------------------
-“There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.” 
--- Tony Hoare --
-https://en.wikiquote.org/wiki/C._A._R._Hoare
-If you can’t do the first variant, the second way starts looking awfully attractive perhaps.
-
-"The most important property of a program is whether it accomplishes the intentions of its user."
--- Tony Hoare --
-https://en.wikiquote.org/wiki/C._A._R._Hoare
-
-
-------------------------------------
 Naming:
 
 
-Lees eens harop voor:
+Lees eens hardop voor:
 
 ``` csharp
 interface IQueryActiveCart{}

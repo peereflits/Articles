@@ -1,14 +1,31 @@
 Gepubliceerd
 
-2023-week-49 Over Mastery.md | Mastery vs professionaliteit
-2023-week-50 Over Zeemeerminnen.md | Mermaid.js
-2023-week-51 Over Dynamics of software development.md | Dynamics of software development
-2024-week-02 Over wetenschappelijk bewijzen.md | Testen & Wetenschappelijk bewijzen
-2024-week-03 Over De meeste mensen deugen.md | De meeste mensen deugen
-2024-week-04 Over het verschil tussen software en hardware.md | Over het verschil tussen software en hardware
-2024-week-05 Over wat en hoe.md | Over *wat* en *hoe* (declaratief versus imperatief)
-2024-week-06 Over Intention Revealing Programming.md | Over Intention Revealing Programming
-2024-week-07 Over Coding Guidelines.md | Over Coding Guidelines
+2023-week-49 Over Mastery.md
+2023-week-50 Over Zeemeerminnen.md
+2023-week-51 Over Dynamics of software development.md
+2024-week-02 Over wetenschappelijk bewijzen.md
+2024-week-03 Over De meeste mensen deugen.md
+2024-week-04 Over het verschil tussen software en hardware.md
+2024-week-05 Over wat en hoe.md
+2024-week-06 Over Intention Revealing Programming.md
+2024-week-07 Over Coding Guidelines.md
+2024-week-09 Over Generaties van talen.md
+2024-week-10 Over Compileren Transpileren Interpreteren.md
+2024-week-11 Over Software is everywhere.md
+2024-week-12 Over Software is eating the world.md
+2024-week-13 Over De noodzaak van eenvoud.md
+2024-week-14 Over Compileren II.md
+2024-week-15 Over De moeilijkheid van Communicatie.md
+2024-week-16 Over Wat en Hoe II.md
+2024-week-17 Over Sequentie Selectie Iteratie.md
+2024-week-18 Over het relationele van een rdbms.md
+2024-week-19 Over goedkope opslag.md
+2024-week-20 Over de wiskundeknobbel.md
+2024-week-21 Over Pet projects.md
+2024-week-22 Over Conferenties.md
+2024-week-23 Over GitHub Copilot.md
+2024-week-25 Over het intelligente in AI.md
+2024-week-26 Overdenkingen.md
 
 ====================================
 Onderwerpen:

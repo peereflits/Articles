@@ -60,6 +60,10 @@ De reason d'être van "disk" is om "durable" state (persistente state) mogelijk 
   
 Dat er niet zoiets als "overerving" bestaat in database talen, is omdat dit een concept is dat niet van toepassing is in het probleemdomein van "gestructureerde gegevensopslag".
 
+Heb je vragen en/of opmerkingen: schroom niet om mij de contacten :smile:
+
+Volgende week: een lang relaas over object oriëntatie.
+
 ---
 
 🍐 schrijft elke week een stukje. Over ... van-alles-en-nog-wat. 

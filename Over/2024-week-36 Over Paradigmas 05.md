@@ -55,6 +55,9 @@ Frameworks als Java Spring en ASP.NET doen veel om de "paradigm mismatch" weg te
 
 Zal de toekomst uit gaan wijzen dat FP-talen OO-talen gaan vervangen omdat zij beter aansluiten op het Web-programming paradigma daar FP en internet/HTTP beide stateless van nature zijn?
 
+Heb je vragen en/of opmerkingen: schroom niet om mij de contacten :smile:
+
+Volgende week: over cloud computing.
 
 ---
 

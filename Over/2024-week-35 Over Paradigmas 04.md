@@ -38,6 +38,9 @@ In FP "leeft" een functie dus op een processor-thread. En met de komst van multi
  
 Dat er niet zoiets als "inheritance" bestaat in FP talen, is omdat dit een concept is dat niet van toepassing is in het probleemdomein van "functional programming".
 
+Heb je vragen en/of opmerkingen: schroom niet om mij de contacten :smile:
+
+Volgende week: over internet / web programming.
 
 ---
 

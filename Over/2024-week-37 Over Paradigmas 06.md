@@ -38,6 +38,10 @@ Cloud computing maakt door een ongekende beschikbaarheid van compute + storage m
 
 Dat er niet zoiets als "polymorphisme" bestaat in CC, is omdat dit een concept is dat niet van toepassing is in het probleemdomein van "cloud computing".
 
+Heb je vragen en/of opmerkingen: schroom niet om mij de contacten :smile:
+
+Volgende week: de conclusies.
+
 ---
 
 🍐 schrijft elke week een stukje. Over ... van-alles-en-nog-wat. 

@@ -120,6 +120,9 @@ Een kenmerk van (RAM-)geheugen is dat zij zeer vluchtig is. `RAM == volatile sta
 
 Dat er niet zoiets als een "foreign key constraint" bestaat in OO talen, is omdat dit een concept is dat niet van toepassing is in het probleemdomein van "object oriëntatie".
 
+Heb je vragen en/of opmerkingen: schroom niet om mij de contacten :smile:
+
+Volgende week: over functional programming.
 
 ---
 

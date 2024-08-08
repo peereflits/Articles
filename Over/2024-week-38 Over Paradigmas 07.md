@@ -1,6 +1,6 @@
 *Over ...*
 
-# Over Programmeerparadigma's (VI)
+# Over Programmeerparadigma's (VII)
 
 Dit is het laatste artikel uit de serie **Programmeerparadigma's gaan niet over software**. 
 

@@ -4,7 +4,7 @@
 
 Uit de serie **Programmeerparadigma's gaan niet over software** is dit deel zes. 
 
-*Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". In deze serie van artikelen leg ik uit welk paradigma welke hardware probleem oplost.*
+*Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". In deze serie van artikelen leg ik uit welk paradigma welk hardware probleem oplost.*
 
 ## Deel 6: Cloud computing
 

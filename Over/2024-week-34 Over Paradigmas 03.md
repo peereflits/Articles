@@ -1,18 +1,10 @@
-# Programmeerparadigma's gaan niet over software (IV)
+*Over ...*
 
-*TL;DR; Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". In deze serie van artikelen leg ik uit welk paradigma welke hardware probleem oplost.*
+# Over Programmeerparadigma's (III)
 
-**Inhoudsopgave**
+Dit is het derde deel uit de serie **Programmeerparadigma's gaan niet over software**. 
 
-* [Deel 1](./deel-01-intro.md): Introductie
-* [Deel 2](./deel-02-dbs.md): Databases (relationeel & NoSQL)
-* Deel 3: Object oriëntatie
-* [Deel 4](./deel-04-fp.md): Functional programming
-* [Deel 5](./deel-05-wp.md): Internet / Web programming
-* [Deel 6](./deel-06-cc.md): Cloud computing
-* [Deel 7](./deel-07-conclusies.md): Conclusies
-* [Referenties](./deel-08-referenties.md)
-
+*Programmeerparadigma's gaan niet alleen over software. Programmeerparadigma's gaan meer over hardware dan we denken. Een programmeerparadigma probeert een probleem op te lossen van het medium waarop het "leeft". In deze serie van artikelen leg ik uit welk paradigma welke hardware probleem oplost.*
 
 ## Deel 3: Object oriëntatie
 
@@ -53,7 +45,7 @@ Functie modules uit die vroege tijd waren (soms) enorme libraries met niets ande
 
 Als het aantal parameters van een functie toeneemt, neemt ook de [cyclomatische complexiteit](https://en.wikipedia.org/wiki/Cyclomatic_complexity) toe. Cyclomatische complexiteit wordt bepaald door de hoeveelheid mogelijke paden die de code in en functie kan doorlopen. `Grotere cyclomatische complexiteit == meer complexiteit`. En we weten ook: Complexity kills!
 
-![Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.](complexity_kills.png)
+> Complexity kills. It sucks the life out of users, developers and IT. Complexity makes products difficult to plan, build, test and use. Complexity introduces security challenges. Complexity causes administrator frustration.<br /><cite>[Ray Ozzie](https://www.computerworld.com/article/2513705/ozzie-s--doomsday--memo-warns-microsoft-of-post-pc-days.html)</cite>
 
 Toen een aantal knappe koppen hierover nadachten, ontstond het idee: als we nu eens het gedrag en de bijbehorende data van een functionaliteit (= één functie) zouden kunnen encapsuleren in één construct, één ding, één object ... ? En voilà: hier heb je "object oriëntatie".
 
@@ -127,3 +119,11 @@ Een kenmerk van (RAM-)geheugen is dat zij zeer vluchtig is. `RAM == volatile sta
 * OO is uiteindelijk ontstaan om efficiënter en goedkoper 'state' en complexiteit in een 'volatile medium' (= RAM) te beheren;
 
 Dat er niet zoiets als een "foreign key constraint" bestaat in OO talen, is omdat dit een concept is dat niet van toepassing is in het probleemdomein van "object oriëntatie".
+
+
+---
+
+🍐 schrijft elke week een stukje. Over ... van-alles-en-nog-wat. 
+En vooral over programmeren, techniek en hoe jij je daar, als &#9432;Naut toe kan verhouden.
+
+---

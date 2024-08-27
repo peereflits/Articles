@@ -1,4 +1,4 @@
-![Logo](./img/peereflits-logo.png) 
+![Logo](./img/peereflits.svg) 
 
 # Articles
 

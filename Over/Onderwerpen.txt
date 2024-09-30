@@ -36,7 +36,7 @@ De van disk afgeleide database taal (SQL) kent zijn eigen grammatica: CRUD.
 
 CRUD is slechts één van de drie drie taal varianten binnen SQL:
 
-DML: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE)
+DML: Data Manipulation Language (SELECT, INSERT, UPDATE, DELETE, MERGE)
 DDL: Data Definition Language (CREATE, ALTER, DROP)
 DAL: Data Authorization Language (GRANT, REVOKE, DENY)
 DTL: Data Transaction Language (BEGIN TRANSACTION, COMMIT, ROLLBACK)
@@ -121,3 +121,30 @@ class Controller
 
 Bemerk eens hoe de interfaces (wat *beloof* ik) en de implementaties -classes- (wat *ben* ik) in het eerste voorbeeld genuanceerder expliciet zijn. Vooral bij gebruik (in controllers).
 En valt je bij het laatste voorbeeld de dodelijk eentonige repetitie op?
+
+
+---------------------
+GitGub Copilot Dev Productivity
+Another Report Weighs In on GitHub Copilot Dev Productivity: 👎
+https://visualstudiomagazine.com/Articles/2024/09/17/Another-Report-Weighs-In-on-GitHub-Copilot-Dev-Productivity.aspx
+
+---------------------
+Monorepo vs Multi-repo
+
+---------------------
+TCP
+Train, Coach, Pair
+
+---------------------
+Why do we need managers?
+
+---------------------
+Scrum = dead
+
+---------------------
+
+Microservices are Technical Debt
+https://www.youtube.com/watch?v=LcJKxPXYudE
+
+---------------
+

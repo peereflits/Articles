@@ -28,6 +28,8 @@ Some reasoning and Google queries further I experimented with turning off IPv6 i
 
 ![Network adapter settings](./2024-10-23-network-adapter.png)
 
-After some testing (turn on, reboot, fail, turn off, reboot, success) I concluded: it works!
+After some testing (turn on, reboot, fail, turn off, reboot, success) I concluded: when IPv6 turned off I was able to build my docker(-compose) files, otherwise it failed.
+
+It worked!
 
 At least on my machine :grin:!

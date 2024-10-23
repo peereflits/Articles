@@ -57,6 +57,9 @@ Het belang van nieuwsgierigheid ...
 Why Most Engineers Aren't 10x Engineers
 https://www.developing.dev/p/why-most-engineers-arent-10x-engineers
 
+“My whole view of life is that we cannot know the skills we will need tomorrow. So we need curiosity, humility, and the desire to learn the answers, not to already know them,”
+Sanjay Srivastava (in https://blogs.idc.com/2024/09/13/hire-for-potential-not-for-skills/)
+
 
 ------------------------------------
 Naming:
@@ -128,6 +131,9 @@ GitGub Copilot Dev Productivity
 Another Report Weighs In on GitHub Copilot Dev Productivity: 👎
 https://visualstudiomagazine.com/Articles/2024/09/17/Another-Report-Weighs-In-on-GitHub-Copilot-Dev-Productivity.aspx
 
+Sorry, GenAI is NOT going to 10x computer programming
+https://garymarcus.substack.com/p/sorry-genai-is-not-going-to-10x-computer
+
 ---------------------
 Monorepo vs Multi-repo
 
@@ -148,3 +154,20 @@ https://www.youtube.com/watch?v=LcJKxPXYudE
 
 ---------------
 
+ the famous quote by Phil Karlton: "There are only two hard things in computer science: cache invalidation and naming things."
+
+---------------
+Two rules of thumb
+Rule one: after I make a decision about a tradeoff, I need a plan to address the negative consequences of my choice, in a way that doesn't also add in the negative consequences of the other choice.
+Rule two: this explains a lot of the movement (or more cynically, churn) in software tech. Even when we make the right choice overall, in the moment we're still under a lot of pain, and so we look for new tools/technologies/practices that address the pain we currently feel.
+Bonus rule: part of the reason we do Software Mimicry is to reduce the pain of a choice we made.
+
+---------------
+
+The World Depends on 60-Year-Old Code No One Knows Anymore
+https://www.youtube.com/watch?v=LWYmGhIFy-A
+
+No Code App Development is a Trap
+https://www.youtube.com/watch?v=xkMuykgicYA
+
+---------------

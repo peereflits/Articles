@@ -2,7 +2,7 @@
 
 **TL;DR; Turn off IPv6.**
 
-Just recently I encountered issues with docker my docker files and compose scripts: it wouldn't build anymore.
+Just recently (possibly after a Windows update) I encountered issues with docker my docker files and compose scripts: it wouldn't build anymore.
 
 After some investigation I could narrow the issue down to a failed `docker pull` from `mcr.microsoft.com`. At least the following images failed:
 
@@ -33,3 +33,11 @@ After some testing (turn on, reboot, fail, turn off, reboot, success) I conclude
 It worked!
 
 At least on my machine :grin:!
+
+---
+
+**Note:** In reply of this article some readers noted that they didn't have any issues with pulling 
+images from `mcr.microsoft.com`. It turned out they're using Win 10. 
+
+My machine runs on Win 11 pro 23H2. 
+I assume it has to do with cipher suites. It looks like the issue started to happen after a Windows update, although I cannot pinpoint the exact time frame.

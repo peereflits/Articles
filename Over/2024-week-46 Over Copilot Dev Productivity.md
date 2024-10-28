@@ -2,7 +2,7 @@
 
 # Over GitGub Copilot Dev Productivity
 
-In week 23 schreef ik over [GitHub Copilot](https://docs.github.com/en/copilot/about-github-copilot): de grote Dev-hype die ons leven *echt* mooi, makkelijk en geweldig zou maken. Althans, dat is wat de marketing machine ons zou willen doen geloven. Met meer dan 55% developer productivity winst:
+In week 23 schreef ik over [GitHub Copilot](https://docs.github.com/en/copilot/about-github-copilot): de grote Dev-hype die ons leven *echt* mooi, makkelijk en geweldig zou maken. Althans, dat is wat de marketingmachine ons zou willen doen geloven. Met meer dan 55% developer productivity winst:
 
 > Last year, our research uncovered that developers using GitHub Copilot code 55% faster.<br/>
 <cite>[Mario Rodriguez, October 10, 2023](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-code-quality/)</cite>

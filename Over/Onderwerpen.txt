@@ -127,14 +127,6 @@ En valt je bij het laatste voorbeeld de dodelijk eentonige repetitie op?
 
 
 ---------------------
-GitGub Copilot Dev Productivity
-Another Report Weighs In on GitHub Copilot Dev Productivity: 👎
-https://visualstudiomagazine.com/Articles/2024/09/17/Another-Report-Weighs-In-on-GitHub-Copilot-Dev-Productivity.aspx
-
-Sorry, GenAI is NOT going to 10x computer programming
-https://garymarcus.substack.com/p/sorry-genai-is-not-going-to-10x-computer
-
----------------------
 Monorepo vs Multi-repo
 
 ---------------------
@@ -146,11 +138,6 @@ Why do we need managers?
 
 ---------------------
 Scrum = dead
-
----------------------
-
-Microservices are Technical Debt
-https://www.youtube.com/watch?v=LcJKxPXYudE
 
 ---------------
 

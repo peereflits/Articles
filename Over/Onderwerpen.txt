@@ -158,3 +158,62 @@ No Code App Development is a Trap
 https://www.youtube.com/watch?v=xkMuykgicYA
 
 ---------------
+
+Idempotency is a crucial concept for REST APIs that ensures the reliability and consistency of your system. An idempotent operation can be repeated multiple times without changing the result beyond the initial API request. This property is especially important in distributed systems, where network failures or timeouts can lead to repeated requests.
+
+Implementing idempotency in your API brings several benefits:
+
+It prevents unintended duplicate operations
+It improves reliability in distributed systems
+It helps handle network issues and retries gracefully
+In this week's issue, we'll explore how to implement idempotency in ASP .NET Core APIs, ensuring your system remains robust and reliable.
+
+What is Idempotence?
+Idempotence, in the context of web APIs, means that making multiple identical requests should have the same effect as making a single request. In other words, no matter how many times a client sends the same request, the server-side effect should only occur once.
+
+The RFC 9110 standard about HTTP Semantics offers a definition we could use. Here's what it says about idempotent methods:
+
+A request method is considered "idempotent" if the intended effect on the server of multiple identical requests with that method is the same as the effect for a single such request.
+​
+Of the request methods defined by this specification, PUT, DELETE, and safe request methods [(GET, HEAD, OPTIONS, and TRACE) - author's note] are idempotent.
+​
+— RFC 9110 (HTTP Semantics), Section 9.2.2, Paragraph 1
+However, the following paragraph is quite interesting. It clarifies that the server can implement "other non-idempotent side effects" that don't apply to the resource.
+
+... the idempotent property only applies to what has been requested by the user; a server is free to log each request separately, retain a revision control history, or implement other non-idempotent side effects for each idempotent request.
+​
+— RFC 9110 (HTTP Semantics), Section 9.2.2, Paragraph 2
+The benefits of implementing idempotency extend beyond just adhering to HTTP method semantics. It significantly improves the reliability of your API, especially in distributed systems where network issues can lead to retried requests. By implementing idempotency, you prevent duplicate operations that could occur due to client retries.
+
+Which HTTP Methods are Idempotent?
+Several HTTP methods are inherently idempotent:
+
+GET, HEAD: Retrieve data without modifying the server state.
+PUT: Update a resource, resulting in the same state regardless of repetition.
+DELETE: Remove a resource with the same outcome for multiple requests.
+OPTIONS: Retrieve communication options information.
+POST is not inherently idempotent, as it typically creates resources or processes data. Repeated POST requests could create multiple resources or trigger multiple actions.
+
+However, we can implement idempotency for POST methods using custom logic.
+
+Note: While POST requests aren't naturally idempotent, we can design them to be. For example, checking for existing resources before creation ensures that repeated POST requests don't result in duplicate actions or resources.
+
+---------------
+
+
+“We’re agile” has come to mean “We’re moving fast and breaking things to get new, not-thought-out untested features delivered this quarter to make our executives look good at the industry conference”. Or, “No we don’t have a plan, we react to whatever is happening now”, or “Our development team runs at 100% utilization because idle developers cost us money, and developers are expensive.”
+https://georgestocker.com/2024/08/16/agile-is-not-a-process/
+
+“The best architectures, requirements, and designs emerge from self-organizing teams.”
+The best architectures, requirements, and designs demonstrably do not emerge from self-organizing teams, because those self-organizing teams have constraints they don’t control. It doesn’t matter if the four of us on a team get to pick what we work on, or what tech-stack we use, or whether we make it a relational database or a no-sql database. We’re not the Avengers. We don’t have superpowers that obviate the need for resources and budgets. (As an aside, in the MCU movies, shield doesn’t seem to do anything other than get in the Superheroes way; whereas for the non-superheroes among us, we’re always dependent on some sort of bureaucracy to support our work).
+
+------------------------------------
+
+Deploy vs Release / Feature flags
+
+------------------------------------
+
+Waarom winst van Trump mogelijk grote gevolgen heeft voor de digitale overheid
+https://ibestuur.nl/artikel/waarom-winst-van-trump-mogelijk-grote-gevolgen-heeft-voor-de-digitale-overheid/
+
+------------------------------------

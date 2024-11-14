@@ -217,3 +217,30 @@ Waarom winst van Trump mogelijk grote gevolgen heeft voor de digitale overheid
 https://ibestuur.nl/artikel/waarom-winst-van-trump-mogelijk-grote-gevolgen-heeft-voor-de-digitale-overheid/
 
 ------------------------------------
+
+Is Functional Programming DEAD Already?
+https://www.youtube.com/watch?v=gE6nnDsh5Ck
+
+“An expert is someone who knows some of the worst mistakes that can be made in his subject, and how to avoid them.”
+Werner Heisenberg
+
+Don't Build Perfect Software
+https://www.youtube.com/watch?v=NEJUkvWGuvw
+
+
+------------------------------------
+
+Hyperlight
+
+Microsoft Build 2023 Inside Azure Innovations - Hyperlight
+By Mark Russinovich (00:03:47)
+https://www.youtube.com/watch?v=Tz2SOjKZwVA
+
+What is Hyperlight? (part I)
+https://arschles.com/blog/hyperlight-overview-1/
+What is Hyperlight (part II)?
+https://arschles.com/blog/hyperlight-overview-2/
+
+Introducing Hyperlight: Virtual machine-based security for functions at scale
+https://opensource.microsoft.com/blog/2024/11/07/introducing-hyperlight-virtual-machine-based-security-for-functions-at-scale/
+
